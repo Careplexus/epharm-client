@@ -1,10 +1,10 @@
 import { Cart } from "@/components";
 
 export default function CartPage() {
-    return (
-        <div className="container mx-auto p-4 w-full h-full my-5">
-            <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
-            <Cart />
-        </div>
-    );
+  return (
+    <div className="container mx-auto px-4 py-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">Your Cart</h1>
+      <Cart />
+    </div>
+  );
 }
