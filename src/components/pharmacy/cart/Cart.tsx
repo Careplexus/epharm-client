@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Cart() {
       const { value, handleIncrement, handleDecrement, handleChange } = useQuantityInput();
-    const { items, removeCartItem, clearCart} = useCartStore((state)=> state);
+    const { items, removeCartItem } = useCartStore((state)=> state);
 
     if (items.length === 0) {
         return (

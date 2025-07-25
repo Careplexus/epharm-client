@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components"
 import { ProductCard } from "@/components";
 import { products } from "@/data";
+import type { Product } from "@/types/product.type";
 
 
 type GroupedProducts = {

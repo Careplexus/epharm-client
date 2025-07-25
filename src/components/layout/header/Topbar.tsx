@@ -12,7 +12,7 @@ export default function Topbar() {
                 <div className="bg-orange-400 rounded-full p-2 cursor-pointer hover:bg-orange-500 transition-colors">
                     <Link to="/products/cart"><ShoppingCart className="text-white" size={20} /></Link>
                 </div>
-                <a href="https://careplexus.com/account/pharmacists/register" title="contact page" target="_blank" rel="noopener noreferrer"><UserPlus className="text-blue-500 ml-4 cursor-pointer" size={25}/></a>
+                <a href="https://careplexus.com/account/pharmacists/register" title="Login" target="_blank" rel="noopener noreferrer"><UserPlus className="text-blue-500 ml-4 cursor-pointer" size={25}/></a>
             </div>
         </section>
     )
