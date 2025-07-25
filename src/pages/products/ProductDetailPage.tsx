@@ -13,7 +13,7 @@ export default function ProductDetailPage() {
     }
 
     return (
-        <div className="grid grid-cols-1 place-items-center py-4 px-2 mx-2">
+        <div className="grid grid-cols-1 place-items-center py-4 px-2 mx-2 min-h-[calc(100vh-96px)]">
             <ProductDetail product={product}/>
         </div>
     )

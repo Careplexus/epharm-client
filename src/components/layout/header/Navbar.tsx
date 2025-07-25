@@ -19,7 +19,7 @@ export default function Navbar() {
             <ul className="hidden md:flex space-x-10">
                 <li className="text-white hover:text-gray-300">
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none">E-Pharmacy</DropdownMenuTrigger>
+                        <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none cursor-pointer">E-Pharmacy</DropdownMenuTrigger>
                         <DropdownMenuContent>
                             <DropdownMenuItem><Link to='/'>Medications</Link></DropdownMenuItem>
                             <DropdownMenuItem>Supplements</DropdownMenuItem>
@@ -30,7 +30,7 @@ export default function Navbar() {
                 </li>
                 <li className="text-white hover:text-gray-300">
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none">Our Services</DropdownMenuTrigger>
+                        <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none cursor-pointer">Our Services</DropdownMenuTrigger>
                         <DropdownMenuContent>
                             <DropdownMenuItem><Link to='/telepharmacy'>Telepharmacy</Link></DropdownMenuItem>
                             <DropdownMenuItem><Link to='/sales'>Pharmaceutical sales</Link></DropdownMenuItem>

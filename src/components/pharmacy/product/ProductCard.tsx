@@ -1,37 +1,23 @@
-import { useState } from "react"
-import { ShoppingCart, Plus, Minus} from "lucide-react"
-import { Input, Separator } from   "@/components"
-import { Link } from "react-router-dom"
 
-type Product = {
-    id: number;
-    image: string;
-    name: string;
-    price: string;
-}
+import { ShoppingCart } from "lucide-react"
+import { useQuantityInput } from "@/hooks/useQuantityInput"
+import { Separator, QuantityInput } from   "@/components"
+import { Link } from "react-router-dom"
+import type { Product } from "@/types/product.type"
+import { useCartStore } from "@/store/cartStore"
 
 export default function ProductCard({product}: { product: Product }) {
-    const [value, setValue] = useState<number>(0)
+   const { value, handleChange, handleIncrement, handleDecrement } = useQuantityInput()
+    const { addCartItem} = useCartStore((state)=> state);
 
-    const handleIncrement = () => {
-        setValue((prev)=>prev + 1)
-    }
 
-    const handleDecrement = () => {
-        setValue((prev)=>prev > 0 ? prev - 1 : 0)
-    }
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
-        const inputValue = e.target.value
-        const newValue = parseInt(inputValue, 10)
-        setValue(isNaN(newValue) || newValue < 0 ? 0 : newValue)
-    }
+    if (!product) return (<div><h2>No product Found!</h2></div>);
 
     return (
         <section className="grid grid-cols-1 grid-rows-[2fr_1fr_100px] w-60 h-92  gap-x-1 bg-white shadow-md rounded-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
             <header className="bg-white">
                 <Link to={`/product/${product.id}`}>
-                    <img src={product.image} alt="Product Image" />
+                    <img src={product.image} alt="Product Image" className="object-cover"/>
                 </Link>
             </header>
             <main className="m-3">
@@ -46,13 +32,8 @@ export default function ProductCard({product}: { product: Product }) {
             <footer>
                 <Separator className="mb-0.5" />
                 <div className="flex justify-between items-center py-1 mx-2">
-                    <ShoppingCart className="cursor-pointer p-0.5 hover:bg-gray-500 hover:text-white" />
-                    <div className="flex items-center gap-1">
-                        <button  type="button" aria-label="decrement" onClick={handleDecrement}><Minus className="cursor-pointer p-0.5 hover:bg-gray-500 hover:text-white" /></button>
-                        <Input type="number" value={value} onChange={handleChange} className="no-spinner border-1 border-gray-500 w-15 h-7 text-center" defaultValue={1} />
-                        <button  type="button" aria-label="increment" onClick={handleIncrement}><Plus className="cursor-pointer p-0.5 hover:bg-gray-500 hover:text-white" /></button>
-                    </div>
-                   
+                    <button onClick={()=> addCartItem(product.id, value)} aria-label="Add item to cart"><ShoppingCart className="cursor-pointer p-0.5 hover:bg-gray-500 hover:text-white" /></button>
+                    <QuantityInput value={value} handleChange={handleChange} handleDecrement={handleDecrement} handleIncrement={handleIncrement} />
                     <p className="font-bold text-red-500">&#8358;{Number(product.price.replace(/[,.]/g, '')) * value}</p>
                 </div>
             </footer>
