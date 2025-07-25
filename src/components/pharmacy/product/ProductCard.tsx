@@ -28,7 +28,7 @@ export default function ProductCard({product}: { product: Product }) {
     }
 
     return (
-        <section className="grid grid-cols-1 grid-rows-[2fr_1fr_100px] w-56 h-88 md:w-60 md:h-92  gap-x-1 bg-white shadow-md rounded-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
+        <section className="grid grid-cols-1 grid-rows-[2fr_1fr_100px] w-60 h-92  gap-x-1 bg-white shadow-md rounded-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200">
             <header className="bg-white">
                 <Link to={`/product/${product.id}`}>
                     <img src={product.image} alt="Product Image" />

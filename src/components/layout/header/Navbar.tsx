@@ -47,7 +47,7 @@ export default function Navbar() {
                     <input
                         type="text"
                         placeholder="Search products..."
-                        className="w-full h-8 p-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-blue-300"
+                        className="w-full h-8 p-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-gray-300"
                     />
                 </form>
             </div>

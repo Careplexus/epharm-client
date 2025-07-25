@@ -36,7 +36,7 @@ export default function ProductList() {
     return (
         <>
             <Tabs defaultValue="medication">
-                <TabsList className="w-3/4 md:w-1/2 my-4 mx-auto bg-blue-500">
+                <TabsList className="w-full h-12 md:w-2/3 my-2 bg-gray-300 rounded-sm">
                     {productCategories.map((category) => (
                         <TabsTrigger key={category} value={category} className="font-semibold">
                             {category.charAt(0).toUpperCase() + category.slice(1)}

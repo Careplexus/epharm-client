@@ -13,7 +13,7 @@ export default function ProductDetailPage() {
     }
 
     return (
-        <div className="grid grid-cols-1 place-items-center py-10">
+        <div className="grid grid-cols-1 place-items-center py-4 px-2 mx-2">
             <ProductDetail product={product}/>
         </div>
     )

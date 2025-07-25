@@ -11,7 +11,7 @@ export default function ProductDetail({product}: { product: Product }) {
             <div className="md:col-span-1 w-96 h-96 ">
                 <img src={product.image} alt={product.name}/>
             </div>
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 md:pt-15 md:pl-10 lg:pl-5">
                 <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
                 <p className="text-green-600 font-semibold">Selling Price: &#8358;{product.price}</p>
                 <p className="text-sm mt-2 text-orange-500 font-semibold">Discount: &#8358;{(10/100 * (Number(product.price.replace(/,/g, ''))))}</p>
