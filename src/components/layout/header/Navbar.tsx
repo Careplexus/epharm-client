@@ -13,13 +13,13 @@ export default function Navbar() {
             <div className="flex justify-between items-center">
                 <div className="flex place-items-center cursor-pointer">
                     <Link to="/"><h1 className="text-2xl font-bold mr-0.5">Careplexus</h1></Link>
-                    <PlusCircle  className="text-blue-500"/>
+                    <PlusCircle  className="text-blue-500" size={20} />
                 </div>
             </div>
             <ul className="hidden md:flex space-x-10">
                 <li className="text-white hover:text-gray-300">
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="text-slate-800 font-semibold">E-Pharmacy</DropdownMenuTrigger>
+                        <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none">E-Pharmacy</DropdownMenuTrigger>
                         <DropdownMenuContent>
                             <DropdownMenuItem><Link to='/'>Medications</Link></DropdownMenuItem>
                             <DropdownMenuItem>Supplements</DropdownMenuItem>
@@ -30,7 +30,7 @@ export default function Navbar() {
                 </li>
                 <li className="text-white hover:text-gray-300">
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="text-slate-800 font-semibold">Our Services</DropdownMenuTrigger>
+                        <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none">Our Services</DropdownMenuTrigger>
                         <DropdownMenuContent>
                             <DropdownMenuItem><Link to='/telepharmacy'>Telepharmacy</Link></DropdownMenuItem>
                             <DropdownMenuItem><Link to='/sales'>Pharmaceutical sales</Link></DropdownMenuItem>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 <li className="text-slate-800 font-semibold hover:text-gray-300"><a href="https://careplexus.com" target="_blank" rel="noopener noreferrer">About Us</a></li>
                 <li className="text-slate-800 font-semibold hover:text-gray-300"><a href="https://careplexus.com/contact-us" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
-            <div>
+            <div className="mx-2">
                 <form>
                     <input
                         type="text"

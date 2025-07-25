@@ -45,7 +45,7 @@ export default function ProductList() {
                 </TabsList>
                 {productCategories.map((category) => (
                     <TabsContent key={category} value={category}>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-2 place-items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 place-items-center">
                             {grouped[category].map((product: Product) => (
                                 <ProductCard key={product.id} product={product} />
                             ))}

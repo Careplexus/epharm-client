@@ -2,7 +2,7 @@ import { ProductList } from "@/components"
 
 export default function ProductListPage (){
     return(
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-2 py-4">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-2 pt-3 pb-10 px-2">
             <main className="col-span-2 md:col-span-3">
                 <ProductList />
             </main>
