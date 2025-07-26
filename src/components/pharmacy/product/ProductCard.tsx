@@ -58,7 +58,7 @@ export default function ProductCard({ product }: { product: Product }) {
                         handleIncrement={handleIncrement}
                     />
 
-                    <p className="text-sm font-bold text-red-500">&#8358;{total.toLocaleString()}</p>
+                    <p className="hidden lg:inline-block text-sm font-bold text-red-500">&#8358;{total.toLocaleString()}</p>
                 </div>
             </footer>
         </section>
