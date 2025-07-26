@@ -35,7 +35,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 </Link>
                 <div className="flex justify-between items-center">
                     <p className="text-green-600 font-bold text-sm">&#8358;{product.price}</p>
-                    <p className="text-orange-500 text-xs font-semibold">&#8358;{discount.toFixed(2)} OFF</p>
+                    <p className="text-orange-500 text-xs font-semibold">&#8358;{Math.floor(discount)} OFF</p>
                 </div>
             </main>
 
