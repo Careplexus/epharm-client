@@ -1,4 +1,4 @@
-export default function MetaHead() {
+export default function MetaHeader() {
     return (
         <head>
             <title>Product List</title>

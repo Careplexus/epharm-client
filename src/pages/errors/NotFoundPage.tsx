@@ -3,7 +3,7 @@ import { AlertCircle } from 'lucide-react';
 
 export default function NotFoundPage () {
   return (
-    <div className="h-full flex items-center justify-center bg-white">
+    <div className="h-full flex items-center justify-center bg-white pt-30">
       <div className="text-center p-8 max-w-md mx-auto">
         <AlertCircle className="mx-auto h-16 w-16 text-red-500 mb-4" />
         <h1 className="text-4xl font-bold text-gray-800 mb-2">404</h1>
