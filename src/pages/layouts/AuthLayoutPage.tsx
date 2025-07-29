@@ -3,9 +3,9 @@ import {  AuthHeader, Footer } from "@/components";
 
 export default function AuthLayoutPage() {
     return (
-        <div>
+        <div className="bg-gray-50">
             <AuthHeader />
-            <main>
+            <main className="w-full md:w-2/5 pt-5  mx-auto">
                 <Outlet />
             </main>
             <Footer />

@@ -7,9 +7,10 @@ import Cart from "./pharmacy/cart/Cart";
 import CartSummary from "./pharmacy/cart/CartSummary";
 import QuantityInput from "./pharmacy/product/QuantityInput";
 import AuthHeader from "./layout/headers/AuthHeader";
-import Register from "./user/Register";
-import Login from "./user/Login";
+import RegisterForm from "./user/RegisterForm";
+import LoginForm from "./user/LoginForm";
 import Input  from "./ui/input";
+import {Button} from './ui/button'
 import Separator from "./ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, 
@@ -33,8 +34,8 @@ export {
     ProductList,
 
     // User components
-    Register,
-    Login,
+    RegisterForm,
+    LoginForm,
 
     // Common components
     QuantityInput,
@@ -60,4 +61,5 @@ export {
     FormDescription,
     FormMessage,
     FormField,
+    Button
 }
