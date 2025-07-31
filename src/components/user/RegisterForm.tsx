@@ -13,16 +13,22 @@ import {
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { Link } from "react-router-dom"
 
-// Validation schema
-const formSchema = z.object({
-  username: z.string().min(3, "Username must be at least 3 characters"),
-  email: z.string().email("Invalid email address"),
-  first_name: z.string().min(1, "First name is required"),
-  last_name: z.string().min(1, "Last name is required"),
-  phone_number: z.string().min(7, "Phone number is too short"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-})
+const formSchema = z
+  .object({
+    username: z.string().min(3, "Username must be at least 3 characters"),
+    email: z.string().email("Invalid email address"),
+    first_name: z.string().min(1, "First name is required"),
+    last_name: z.string().min(1, "Last name is required"),
+    phone_number: z.string().min(7, "Phone number is too short"),
+    password: z.string().min(6, "Password must be at least 6 characters"),
+    confirm_password: z.string().min(6, "incomplete"),
+  })
+  .refine((data) => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"],
+  })
 
 type FormData = z.infer<typeof formSchema>
 
@@ -36,19 +42,22 @@ export default function RegisterForm() {
       last_name: "",
       phone_number: "",
       password: "",
+      confirm_password: "",
     },
   })
 
   const onSubmit = (data: FormData) => {
-    console.log("Submitted Data:", data)
-    // Place API logic here
+    console.log("Submitted data:", data)
+    // You can place API submission logic here
   }
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-md space-y-6">
+    <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <h2 className="text-2xl font-semibold text-center">Create an Account</h2>
+          <h2 className="text-2xl font-bold text-center text-blue-500 animate-slide-down md:py-2">
+            Register Now!
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -57,13 +66,15 @@ export default function RegisterForm() {
                 <FormItem>
                   <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g. chuksrx" {...field} />
+                    <Input
+                      {...field}
+                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="email"
@@ -71,7 +82,11 @@ export default function RegisterForm() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="you@example.com" {...field} />
+                    <Input
+                      placeholder="example@email.com"
+                      {...field}
+                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -79,6 +94,7 @@ export default function RegisterForm() {
             />
           </div>
 
+          {/* First & Last Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -87,7 +103,67 @@ export default function RegisterForm() {
                 <FormItem>
                   <FormLabel>First Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John" {...field} />
+                    <Input
+                      {...field}
+                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="last_name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Last Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+          {/* Phone Number */}
+          <FormField
+            control={form.control}
+            name="phone_number"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="e.g. +2348012345678"
+                    {...field}
+                    className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Password and Confirm Password */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Password</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="password"
+                      placeholder="••••••••"
+                      {...field}
+                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -96,12 +172,17 @@ export default function RegisterForm() {
 
             <FormField
               control={form.control}
-              name="last_name"
+              name="confirm_password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel>Confirm Password</FormLabel>
                   <FormControl>
-                    <Input placeholder="Doe" {...field} />
+                    <Input
+                      type="password"
+                      placeholder="••••••••"
+                      {...field}
+                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -109,48 +190,21 @@ export default function RegisterForm() {
             />
           </div>
 
-          {/* Phone */}
-          <FormField
-            control={form.control}
-            name="phone_number"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Phone Number</FormLabel>
-                <FormControl>
-                  <Input placeholder="e.g. 08012345678" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Password */}
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Password</FormLabel>
-                <FormControl>
-                  <Input type="password" placeholder="••••••••" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
           {/* Submit Button */}
-          <Button type="submit" className="w-full">
+          <Button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 py-2 rounded-lg shadow-md"
+          >
             Create Account
           </Button>
         </form>
       </Form>
 
-      <p className="text-center text-sm text-muted-foreground">
+      <p className="text-center text-sm text-gray-500 mt-4">
         Already have an account?{" "}
-        <a href="/user/login" className="text-blue-600 hover:underline font-medium">
+        <Link to="/user/login" className="text-blue-600 hover:underline font-medium">
           Login
-        </a>
+        </Link>
       </p>
     </div>
   )

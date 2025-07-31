@@ -11,7 +11,7 @@ export default function AuthHeader() {
           <h1 className="text-2xl font-bold text-gray-800">Careplexus</h1>
           <PlusCircle className="text-blue-500" size={20} />
         </Link>
-        <p className="text-sm text-gray-500">Telepharmacy</p>
+        <p className="text-sm text-gray-500">Pharma Hub</p>
       </div>
     </header>
   );
