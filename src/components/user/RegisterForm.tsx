@@ -51,7 +51,7 @@ export default function RegisterForm() {
                   <FormControl>
                     <Input
                       {...field}
-                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 bg-white"
                     />
                   </FormControl>
                   <FormMessage />

@@ -58,7 +58,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <QuantityInput productId={product.id} />
       </div>
 
-      <p className="text-sm font-semibold text-red-500 whitespace-nowrap">
+      <p className="hidden md:inline text-sm font-semibold text-red-500 whitespace-nowrap">
         &#8358;{total.toLocaleString()}
       </p>
     </div>
