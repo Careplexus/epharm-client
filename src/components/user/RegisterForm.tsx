@@ -10,31 +10,14 @@ import {
   Input,
   Button,
 } from "@/components"
+import { registerSchema, type RegisterData } from "@/schemas"
 import { useForm } from "react-hook-form"
-import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Link } from "react-router-dom"
 
-const formSchema = z
-  .object({
-    username: z.string().min(3, "Username must be at least 3 characters"),
-    email: z.string().email("Invalid email address"),
-    first_name: z.string().min(1, "First name is required"),
-    last_name: z.string().min(1, "Last name is required"),
-    phone_number: z.string().min(7, "Phone number is too short"),
-    password: z.string().min(6, "Password must be at least 6 characters"),
-    confirm_password: z.string().min(6, "incomplete"),
-  })
-  .refine((data) => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"],
-  })
-
-type FormData = z.infer<typeof formSchema>
-
 export default function RegisterForm() {
-  const form = useForm<FormData>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<RegisterData>({
+    resolver: zodResolver(registerSchema),
     defaultValues: {
       username: "",
       email: "",
@@ -46,7 +29,7 @@ export default function RegisterForm() {
     },
   })
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (data: RegisterData) => {
     console.log("Submitted data:", data)
     // You can place API submission logic here
   }

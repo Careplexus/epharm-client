@@ -1,19 +1,18 @@
 import { QuantityInput, Separator } from "@/components";
-import { useQuantityInput } from "@/hooks/useQuantityInput";
 import { Link } from "react-router-dom";
-
-type Product = {
-  id: number;
-  image: string;
-  name: string;
-  price: string;
-};
+import {type  Product } from "@/types/product.type";
+import { useCartStore } from "@/store/cartStore";
+import { useQtyStore } from "@/store/qtyStore";
 
 export default function ProductDetail({ product }: { product: Product }) {
-  const { value, handleIncrement, handleDecrement, handleChange } = useQuantityInput();
 
-  const price = Number(product.price.replace(/,/g, ""));
-  const discount = (10 / 100) * price;
+  const qtyMap = useQtyStore((state) => state.qtyMap);
+  const addCartItem  = useCartStore((state) => state.addCartItem);
+
+  const numericPrice = Number(product.price.replace(/,/g, ""));
+  const discount = (10 / 100) * numericPrice;
+  const qty = qtyMap[product.id] || 1;
+  const total = numericPrice * qty;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-6 sm:py-8">
@@ -31,15 +30,11 @@ export default function ProductDetail({ product }: { product: Product }) {
           <Separator />
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
             <p className="text-orange-500 font-medium">Adjust Quantity:</p>
-            <QuantityInput
-              value={value}
-              handleChange={handleChange}
-              handleDecrement={handleDecrement}
-              handleIncrement={handleIncrement}
-            />
+            <QuantityInput productId={product.id}/>
           </div>
           <Separator />
         </div>
+         
       </div>
 
       {/* Product Info Section */}
@@ -53,10 +48,14 @@ export default function ProductDetail({ product }: { product: Product }) {
           <p className="text-sm text-orange-500 font-medium">
             Discount: &#8358;{discount.toFixed(2)}
           </p>
+          <p className="text-sm font-semibold text-red-500">
+           &#8358;{total.toLocaleString()}
+          </p>
         </div>
+       
 
         <div className="flex flex-col sm:flex-row gap-3 pt-1 sm:pt-2">
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-xl shadow hover:bg-blue-700 transition">
+          <button   onClick={() => addCartItem(product.id, qty)} className="bg-blue-600 text-white px-5 py-2 rounded-xl shadow hover:bg-blue-700 transition">
             Add to Cart
           </button>
           <button className="bg-gray-200 px-5 py-2 rounded-xl shadow hover:bg-gray-300 transition">

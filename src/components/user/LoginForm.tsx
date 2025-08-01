@@ -10,19 +10,11 @@ import {
   Input,
   Button,
 } from "@/components" 
-
+import { loginSchema, type LoginData } from "@/schemas"
 import { useForm } from "react-hook-form"
-import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Link } from "react-router-dom"
 
-
-const loginSchema = z.object({
-  username: z.string().min(3, "Username is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-})
-
-type LoginData = z.infer<typeof loginSchema>
 
 export default function LoginForm() {
   const form = useForm<LoginData>({
