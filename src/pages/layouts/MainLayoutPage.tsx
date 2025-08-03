@@ -1,13 +1,19 @@
 import { Outlet } from "react-router-dom";
-import { Footer, MainHeader } from "@/components";
+import { SidebarProvider } from "@/components/ui/sidebar"
+import { AppSidebar, Footer, MainHeader } from "@/components";
 
 
 export default function MainLayoutPage() {
   return (
-    <div className="min-h-screen pt-15">
-      <MainHeader />
-      <main className="flex-1 mt-16"><Outlet /></main>
-      <Footer />
-    </div>
+    <SidebarProvider defaultOpen={false}>
+      <div className="min-h-screen pt-15">
+        <AppSidebar />
+        <MainHeader />
+        <main className="flex-1 mt-16 w-full">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </SidebarProvider>
   );
 }

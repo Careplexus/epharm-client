@@ -10,10 +10,10 @@ export default function Cart() {
 
   if (items.length === 0) {
     return (
-      <div className="text-center py-10">
-        <h2 className="text-xl font-semibold">Your cart is empty</h2>
+      <div className="text-center py-12">
+        <h2 className="text-xl font-semibold capitalize mb-2">No products added!</h2>
         <p className="text-gray-500">
-          Add some products to your cart to see them here.
+          You haven’t selected any medications or products yet. Please browse the categories and add appropriately.
         </p>
       </div>
     );
@@ -28,7 +28,7 @@ export default function Cart() {
 
   return (
     <div className="container mx-auto px-4 py-6">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Shopping Cart</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-800 uppercase">Selected Products</h2>
       <div className="space-y-4">
         {items.map((item) => {
           const qty = qtyMap[item.id] || 1;

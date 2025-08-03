@@ -1,3 +1,4 @@
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { PhoneCallIcon, PlusCircle, ShoppingCart, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -6,6 +7,7 @@ export default function Topbar() {
         <section className="bg-white shadow-md px-4 py-2 flex justify-between items-center">
             <div className="md:hidden flex items-center gap-1">
                 <Link to="/" className="flex items-center gap-1">
+                    <SidebarTrigger />
                     <h1 className="text-2xl font-bold text-gray-800">CPLX</h1>
                     <PlusCircle className="text-blue-500" size={20} />
                 </Link>

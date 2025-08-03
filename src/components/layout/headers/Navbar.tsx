@@ -1,4 +1,5 @@
-import { PlusCircle } from "lucide-react";
+import { PillBottle,Tablets, Syringe, SoapDispenserDroplet, 
+    Stethoscope, MessageSquare, ClipboardList, Truck, PlusCircle} from "lucide-react"
 import { Link } from "react-router-dom";
 import {
   DropdownMenu,
@@ -23,13 +24,14 @@ export default function Navbar() {
         <li>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none cursor-pointer hover:text-blue-600">
-              E-Pharmacy
+             Medicines & Essentials
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem><Link to='/'>Medications</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/supplements'>Supplements</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/gummies'>Gummies</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/skincare'>Skincare Products</Link></DropdownMenuItem>
+              <DropdownMenuContent>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Tablets/> <span>Medcines</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Syringe/> <span>Injectables</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><PillBottle/> <span>Supplements & Tonics</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><SoapDispenserDroplet/> <span>Skincare</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Stethoscope/> <span>Medical Devices</span></h3></Link></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
@@ -40,9 +42,9 @@ export default function Navbar() {
               Our Services
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem><Link to='/telepharmacy'>Telepharmacy</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/sales'>Pharmaceutical Sales</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/delivery'>Items Delivery</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><MessageSquare /> <span>As a Pharmacist</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><ClipboardList /> <span>Medications Review</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Truck /> <span>Home Delivery</span></h3></Link></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </li>

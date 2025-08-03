@@ -1,3 +1,4 @@
+import AppSidebar from "./layout/AppSidebar";
 import MainHeader from "./layout/headers/MainHeader";
 import Footer from "./layout/footer/Footer";
 import ProductCard from "./pharmacy/product/ProductCard";
@@ -24,6 +25,7 @@ import {
 
 export {
     // Pharmacy components
+    AppSidebar,
     MainHeader,
     Footer,
     AuthHeader,
