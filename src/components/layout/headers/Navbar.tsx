@@ -11,7 +11,6 @@ import {
 export default function Navbar() {
   return (
     <nav className="bg-white shadow-md py-2 px-4 flex flex-col md:flex-row md:justify-between items-center">
-      {/* Brand */}
       <div className="hidden md:flex items-center gap-1">
         <Link to="/" className="flex items-center gap-1">
           <h1 className="text-2xl font-bold text-gray-800">Careplexus</h1>

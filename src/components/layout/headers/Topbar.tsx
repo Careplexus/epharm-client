@@ -10,7 +10,7 @@ export default function Topbar() {
             </div>
             <div className="md:hidden flex items-center gap-1">
                 <Link to="/" className="flex items-center gap-1">
-                    <h1 className="text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
+                    <h1 className="text-1xl font-bold text-gray-800">CAREPLEXUS</h1>
                     <PlusCircle className="text-blue-500" size={20} />
                 </Link>
             </div>
@@ -24,7 +24,7 @@ export default function Topbar() {
                     title="View Cart"
                     className="bg-orange-500 rounded-full p-2 hover:bg-orange-600 transition-colors"
                 >
-                    <ShoppingCart className="text-white" size={20} />
+                    <ShoppingCart className="text-white" size={15} />
                 </Link>
 
                 <Link
@@ -32,7 +32,7 @@ export default function Topbar() {
                     title="Login"
                     className="text-blue-600 hover:text-blue-800 transition-colors"
                 >
-                    <User size={24} />
+                    <User size={20} />
                 </Link>
             </div>
         </section>

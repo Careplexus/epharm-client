@@ -59,8 +59,8 @@ export default function AppSidebar() {
             </DropdownMenu>
           </SidebarGroupContent>
           <SidebarGroupContent className="list-none">
-             <SidebarMenuItem className="mt-5 text-dec"><h2 className="flex "><Info /><span className="pl-2">About Us</span></h2></SidebarMenuItem>
-            <SidebarMenuItem className="mt-5"><h2 className="flex "><Mail /><span className="pl-2">Contact Us</span></h2></SidebarMenuItem>
+             <SidebarMenuItem className="mt-5 text-dec"><h2 className="flex items-center"><Info size={15}/><span className="pl-2">About Us</span></h2></SidebarMenuItem>
+            <SidebarMenuItem className="mt-5"><h2 className="flex items-center"><Mail size={15}/><span className="pl-2">Contact Us</span></h2></SidebarMenuItem>
           </SidebarGroupContent>
         </SidebarGroup>
             </div>
@@ -72,7 +72,7 @@ export default function AppSidebar() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton>
-                  <User2 /> Username
+                  <User2 /> User
                   <ChevronUp className="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
