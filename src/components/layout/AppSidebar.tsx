@@ -7,63 +7,78 @@ import {
   SidebarMenuItem,
   SidebarFooter,
   SidebarMenu,
+  SidebarGroupLabel,
 } from "@/components/ui/sidebar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu"
 import { medicines_menu, services_menu } from "@/navigation/menu-items"
 import { ChevronDown, ChevronUp, User2, Info, Mail } from "lucide-react"
 import { Link } from "react-router-dom"
-
+import { Collapsible, CollapsibleTrigger, CollapsibleContent  } from "../ui/collapsible"
 
 export default function AppSidebar() {
   return (
-    <Sidebar >
+    <Sidebar side="right">
       <SidebarContent>
         <div className="flex flex-col justify-between h-screen mt-5">
           <div>
+            <Collapsible defaultOpen>
+                <SidebarGroup>
+                  <SidebarGroupLabel asChild>
+                    <CollapsibleTrigger>
+                      Medicines & Essentials
+                      <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                    </CollapsibleTrigger>
+                  </SidebarGroupLabel>
+                  <CollapsibleContent>
+                    <SidebarGroupContent>
+                    <SidebarMenu>
+                      {medicines_menu.map((item)=>(
+                        <SidebarMenuItem key={item.title}>
+                          <SidebarMenuButton asChild>
+                            <Link to={item.url}>
+                              <item.icon />
+                              <span>{item.title}</span>
+                            </Link>
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      ))}
+                    </SidebarMenu>
+                    </SidebarGroupContent>
+                  </CollapsibleContent>
+                </SidebarGroup>
+            </Collapsible> 
+            <Collapsible defaultOpen>
+                <SidebarGroup>
+                  <SidebarGroupLabel asChild>
+                    <CollapsibleTrigger>
+                      Our Services
+                      <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                    </CollapsibleTrigger>
+                  </SidebarGroupLabel>
+                  <CollapsibleContent>
+                    <SidebarGroupContent>
+                    <SidebarMenu>
+                      {services_menu.map((item)=>(
+                        <SidebarMenuItem key={item.title}>
+                          <SidebarMenuButton asChild>
+                            <Link to={item.url}>
+                              <item.icon />
+                              <span>{item.title}</span>
+                            </Link>
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      ))}
+                    </SidebarMenu>
+                    </SidebarGroupContent>
+                  </CollapsibleContent>
+                </SidebarGroup>
+            </Collapsible> 
             <SidebarGroup>
-            <SidebarGroupContent>
-            <DropdownMenu>
-              <DropdownMenuTrigger><div className="flex justify-center">Medicines & Essentials <ChevronDown /></div></DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {medicines_menu.map((item) => (
-                  <DropdownMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
-                      <a href={item.url}>
-                        <item.icon />
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-            </SidebarGroupContent>
+              <SidebarGroupContent className="list-none">
+                <SidebarMenuItem className="mt-5 text-dec"><h2 className="flex items-center"><Info size={15}/><span className="pl-2">About Us</span></h2></SidebarMenuItem>
+                <SidebarMenuItem className="mt-5"><h2 className="flex items-center"><Mail size={15}/><span className="pl-2">Contact Us</span></h2></SidebarMenuItem>
+              </SidebarGroupContent>
             </SidebarGroup>
-            <div>
-              <SidebarGroup>
-          <SidebarGroupContent>
-            <DropdownMenu>
-              <DropdownMenuTrigger><div className="flex justify-center">Our Services <ChevronDown /></div></DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {services_menu.map((item) => (
-                  <DropdownMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
-                      <a href={item.url}>
-                        <item.icon />
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </SidebarGroupContent>
-          <SidebarGroupContent className="list-none">
-             <SidebarMenuItem className="mt-5 text-dec"><h2 className="flex items-center"><Info size={15}/><span className="pl-2">About Us</span></h2></SidebarMenuItem>
-            <SidebarMenuItem className="mt-5"><h2 className="flex items-center"><Mail size={15}/><span className="pl-2">Contact Us</span></h2></SidebarMenuItem>
-          </SidebarGroupContent>
-        </SidebarGroup>
-            </div>
           </div>
         <div>
         <SidebarFooter>

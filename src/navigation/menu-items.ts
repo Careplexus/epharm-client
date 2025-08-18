@@ -9,22 +9,22 @@ export const medicines_menu = [
   },
   {
     title: "Injectables",
-    url: "#",
+    url: "products/injectables",
     icon: Syringe,
   },
   {
     title: "Supplements & Tonics",
-    url: "#",
+    url: "products/supplements",
     icon: PillBottle,
   },
   {
     title: "Skincare",
-    url: "#",
+    url: "products/skincare",
     icon: SoapDispenserDroplet,
   },
   {
     title: "Medical devices",
-    url: "#",
+    url: "products/medical-devices",
     icon: Stethoscope,
   },
 ]
@@ -32,17 +32,17 @@ export const medicines_menu = [
 export const services_menu = [
     {
         title: "Ask a Pharmacist",
-        url: "",
+        url: "enquiry",
         icon: MessageSquare,
     },
      {
         title: "Medications Review",
-        url: "",
+        url: "products/review",
         icon: ClipboardList,
     },
      {
         title: "Home Delivery",
-        url: "",
+        url: "delivery",
         icon: Truck,
     },
 ]

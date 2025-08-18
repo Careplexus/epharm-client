@@ -36,7 +36,7 @@ export default function Cart() {
           return (
             <div
               key={item.id} 
-              className="grid grid-cols-2 md:grid-cols-7 items-center gap-4 bg-white shadow rounded"
+              className="grid grid-cols-2 md:grid-cols-7 items-center gap-4 p-4 bg-white shadow rounded"
             >
               <div className="col-span-1">
                 <img

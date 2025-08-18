@@ -54,7 +54,7 @@ export default function ProductCard({ product }: { product: Product }) {
         >
           <ShoppingCart className="w-5 h-5" />
         </button>
-        <div className="w-2/3">
+        <div className="w-2/3 md:w-1/2">
           <QuantityInput productId={product.id} />
         </div>
         <p className="hidden lg:inline-block text-sm font-semibold text-red-500">
