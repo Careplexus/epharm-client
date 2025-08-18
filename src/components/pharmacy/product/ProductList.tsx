@@ -20,7 +20,7 @@ const productCategories = Object.keys(grouped);
 export default function ProductList() {
   return (
     <Tabs defaultValue={productCategories[1]}>
-      <TabsList className="w-full h-auto md:w-2/3 my-4 bg-gray-300 rounded-sm flex flex-wrap px-2 py-1">
+      <TabsList className="w-full h-12 md:w-2/3 my-4 bg-gray-300 rounded-sm flex flex-wrap px-2 py-1">
         {productCategories.map((category) => (
           <TabsTrigger
             key={category}

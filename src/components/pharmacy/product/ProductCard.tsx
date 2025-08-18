@@ -12,9 +12,9 @@ export default function ProductCard({ product }: { product: Product }) {
   if (!product) return <div><h2>No product Found!</h2></div>;
 
   const numericPrice = Number(product.price.replace(/,/g, ""));
-  const discount = (10 / 100) * numericPrice;
   const qty = qtyMap[product.id] || 1;
   const total = numericPrice * qty;
+  const discount = (2 / 100) * total;
 
   return (
 <section className="w-full max-w-[250px] bg-white shadow rounded-md overflow-hidden hover:shadow-lg transition duration-200">
@@ -45,8 +45,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   <footer>
     <Separator />
-    <div className="flex flex-col md:flex-row items-center justify-between px-2 py-2 gap-2">
-      <div className="flex items-center gap-2">
+    <div className="flex items-center justify-between py-2 px-0.5 gap-2 whitespace-nowrap w-full">
         <button
           onClick={() => addCartItem(product.id, qty)}
           aria-label="Add item to cart"
@@ -55,12 +54,12 @@ export default function ProductCard({ product }: { product: Product }) {
         >
           <ShoppingCart className="w-5 h-5" />
         </button>
-        <QuantityInput productId={product.id} />
-      </div>
-
-      <p className="hidden md:inline text-sm font-semibold text-red-500 whitespace-nowrap">
-        &#8358;{total.toLocaleString()}
-      </p>
+        <div className="lg:w-1/2">
+          <QuantityInput productId={product.id} />
+        </div>
+        <p className="hidden lg:inline-block text-sm font-semibold text-red-500">
+          &#8358;{total.toLocaleString()}
+        </p>
     </div>
   </footer>
 </section>

@@ -10,9 +10,9 @@ export default function ProductDetail({ product }: { product: Product }) {
   const addCartItem  = useCartStore((state) => state.addCartItem);
 
   const numericPrice = Number(product.price.replace(/,/g, ""));
-  const discount = (10 / 100) * numericPrice;
   const qty = qtyMap[product.id] || 1;
   const total = numericPrice * qty;
+    const discount = (2 / 100) * total;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-6 sm:py-8">
@@ -28,7 +28,7 @@ export default function ProductDetail({ product }: { product: Product }) {
 
         <div className="mt-4 space-y-4 px-2 sm:px-4">
           <Separator />
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+          <div className="flex justify-between">
             <p className="text-orange-500 font-medium">Adjust Quantity:</p>
             <QuantityInput productId={product.id}/>
           </div>
@@ -42,14 +42,14 @@ export default function ProductDetail({ product }: { product: Product }) {
         <h2 className="text-2xl font-bold text-gray-800">{product.name}</h2>
 
         <div className="bg-gray-50 p-4 rounded-xl shadow-sm space-y-2">
-          <p className="text-green-600 font-semibold text-lg">
-            Selling Price: &#8358;{product.price}
+          <p className="text-green-600 font-bold text-md">
+            Unit Price: &#8358;{product.price}
           </p>
-          <p className="text-sm text-orange-500 font-medium">
+          <p className="text-sm font-bold text-red-500">
+           Total Price: &#8358;{total.toLocaleString()}
+          </p>
+          <p className="text-sm text-orange-500 font-bold">
             Discount: &#8358;{discount.toFixed(2)}
-          </p>
-          <p className="text-sm font-semibold text-red-500">
-           &#8358;{total.toLocaleString()}
           </p>
         </div>
        

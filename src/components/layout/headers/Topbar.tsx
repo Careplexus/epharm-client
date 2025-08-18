@@ -10,7 +10,7 @@ export default function Topbar() {
             </div>
             <div className="md:hidden flex items-center gap-1">
                 <Link to="/" className="flex items-center gap-1">
-                    <h1 className="text-1xl font-bold text-gray-800">CAREPLEXUS</h1>
+                    <h1 className="text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
                     <PlusCircle className="text-blue-500" size={20} />
                 </Link>
             </div>

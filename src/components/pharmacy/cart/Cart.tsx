@@ -27,7 +27,7 @@ export default function Cart() {
   }, 0);
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className="py-6 w-full">
       <div className="space-y-4">
         {items.map((item) => {
           const qty = qtyMap[item.id] || 1;
@@ -36,7 +36,7 @@ export default function Cart() {
           return (
             <div
               key={item.id} 
-              className="grid grid-cols-2 md:grid-cols-7 items-center gap-4 p-4 bg-white shadow rounded w-full"
+              className="grid grid-cols-2 md:grid-cols-7 items-center gap-4 bg-white shadow rounded"
             >
               <div className="col-span-1">
                 <img

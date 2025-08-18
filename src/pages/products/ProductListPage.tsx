@@ -2,7 +2,7 @@ import { ProductList } from "@/components";
 
 export default function ProductListPage() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 pb-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 pb-10 max-w-7xl mx-auto">
             <main className="md:col-span-3 space-y-4">
                 <h1 className="text-xl font-bold text-gray-800 mb-2">SMART PHARMACY CATALOGUE</h1>
                 <ProductList />
