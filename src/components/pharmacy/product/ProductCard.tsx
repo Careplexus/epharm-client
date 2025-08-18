@@ -45,7 +45,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   <footer>
     <Separator />
-    <div className="flex items-center justify-between py-2 px-0.5 gap-2 whitespace-nowrap w-full">
+    <div className="flex items-center justify-between py-2 gap-2">
         <button
           onClick={() => addCartItem(product.id, qty)}
           aria-label="Add item to cart"
@@ -54,7 +54,7 @@ export default function ProductCard({ product }: { product: Product }) {
         >
           <ShoppingCart className="w-5 h-5" />
         </button>
-        <div className="lg:w-1/2">
+        <div className="w-2/3">
           <QuantityInput productId={product.id} />
         </div>
         <p className="hidden lg:inline-block text-sm font-semibold text-red-500">
