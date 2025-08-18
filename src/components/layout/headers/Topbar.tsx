@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Topbar() {
     return (
-        <section className="bg-white shadow-md px-4 py-2 flex justify-between items-center">
+        <section className="bg-white shadow-md px-4 pt-4 pb-2 flex justify-between items-center">
             <div className="md:hidden">
                 <SidebarTrigger />
             </div>

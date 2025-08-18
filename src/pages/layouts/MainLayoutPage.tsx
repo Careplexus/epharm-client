@@ -6,7 +6,7 @@ import { AppSidebar, Footer, MainHeader } from "@/components";
 export default function MainLayoutPage() {
   return (
     <SidebarProvider defaultOpen={false}>
-      <div className="min-h-screen pt-15">
+      <div className="min-h-screen pt-15 w-screen">
         <AppSidebar />
         <MainHeader />
         <main className="flex-1 mt-16 w-full">
