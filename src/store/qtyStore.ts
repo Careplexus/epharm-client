@@ -30,4 +30,5 @@ export const useQtyStore = create<QtyState>((set) => ({
         },
       };
     }),
-}));
+  
+  }));

@@ -3,7 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import { 
   MainLayoutPage, AuthLayoutPage,
   ProductListPage, ProductDetailPage, RegisterPage, 
-  LoginPage, NotFoundPage, CartPage, 
+  LoginPage, NotFoundPage, CartPage,
+  CheckoutPage, 
+  DeliveryAddressPage,
 } from "./pages";
 
 
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<ProductListPage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/products/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/checkout/delivery-address" element={<DeliveryAddressPage />} />
       </Route>
       <Route element={<AuthLayoutPage />}>
         <Route path="/user/register" element={<RegisterPage />} />

@@ -6,6 +6,8 @@ import RegisterPage from "./auth/RegisterPage";
 import LoginPage from "./auth/LoginPage";
 import MainLayoutPage from "./layouts/MainLayoutPage";
 import AuthLayoutPage from "./layouts/AuthLayoutPage";
+import CheckoutPage from "./checkout/CheckoutPage";
+import DeliveryAddressPage from "./checkout/DeliveryAddressPage";
 
 
 export {
@@ -20,4 +22,6 @@ export {
     ProductDetailPage,
     NotFoundPage,
     CartPage,
+    DeliveryAddressPage,
+    CheckoutPage,
 }

@@ -10,6 +10,8 @@ import QuantityInput from "./pharmacy/product/QuantityInput";
 import AuthHeader from "./layout/headers/AuthHeader";
 import RegisterForm from "./user/RegisterForm";
 import LoginForm from "./user/LoginForm";
+import CheckoutForm  from "./pharmacy/checkout/CheckoutForm";
+import DeliveryAddressForm from "./pharmacy/checkout/DeliveryAddressForm";
 import Input  from "./ui/input";
 import {Button} from './ui/button'
 import Separator from "./ui/separator";
@@ -34,6 +36,8 @@ export {
     Cart,
     CartSummary,
     ProductList,
+    CheckoutForm,
+    DeliveryAddressForm,
 
     // User components
     RegisterForm,

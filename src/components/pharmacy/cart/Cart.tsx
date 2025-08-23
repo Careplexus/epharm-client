@@ -7,6 +7,8 @@ import { useQtyStore } from "@/store/qtyStore";
 export default function Cart() {
   const { qtyMap } = useQtyStore();
   const { items, removeCartItem } = useCartStore((state) => state);
+  const subtotal = useCartStore((state) => state.getSubtotal());
+
 
   if (items.length === 0) {
     return (
@@ -19,12 +21,6 @@ export default function Cart() {
     );
   }
 
-  // Calculate subtotal
-  const subtotal = items.reduce((sum, item) => {
-    const qty = qtyMap[item.id] || 1;
-    const price = Number(item.price.replace(/[,.]/g, ""));
-    return sum + price * qty;
-  }, 0);
 
   return (
     <div className="py-6 w-full">
@@ -76,7 +72,7 @@ export default function Cart() {
           Subtotal: &#8358;{subtotal.toLocaleString()}
         </h2>
         <Link
-          to="/products/checkout"
+          to="/checkout/delivery-address"
           className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition-colors"
         >
           Checkout
