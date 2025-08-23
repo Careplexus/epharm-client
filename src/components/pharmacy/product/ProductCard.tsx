@@ -47,7 +47,7 @@ export default function ProductCard({ product }: { product: Product }) {
     <Separator />
     <div className="flex items-center justify-between py-2 gap-2">
         <button
-          onClick={() => addCartItem(product.id, qty)}
+          onClick={() => addCartItem(product.id)}
           aria-label="Add item to cart"
           title="Add to cart"
           className="p-2 rounded-md border border-gray-200 hover:bg-gray-800 hover:text-white transition"
