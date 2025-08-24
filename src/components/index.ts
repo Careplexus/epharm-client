@@ -12,6 +12,7 @@ import RegisterForm from "./user/RegisterForm";
 import LoginForm from "./user/LoginForm";
 import CheckoutForm  from "./pharmacy/checkout/CheckoutForm";
 import DeliveryAddressForm from "./pharmacy/checkout/DeliveryAddressForm";
+import ProductSlider from "./sliders/ProductSlider";
 import Input  from "./ui/input";
 import {Button} from './ui/button'
 import Separator from "./ui/separator";
@@ -38,6 +39,8 @@ export {
     ProductList,
     CheckoutForm,
     DeliveryAddressForm,
+    ProductSlider,
+    
 
     // User components
     RegisterForm,

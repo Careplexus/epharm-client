@@ -18,3 +18,73 @@ export const products: Product[] = [
     { id: 9, image: '/images/products/Oriflame Bright Intense Serum.webp', category: "skincare", name: "Oriflame Bright Serum", pack_size: '', price: "8,000" },
     { id: 10, image: '/images/products/Oriflame Radiance Face Gel.webp', category: "skincare", name: "Oriflame Face Gel", pack_size: '', price: "23,000" },
 ]
+
+export const dermaProducts = [
+  {
+    id: 1,
+    name: "Benzoyl Peroxide Gel 10%",
+    image: "/images/products/benzoyl-peroxide-gel.png",
+  },
+  {
+    id: 2,
+    name: "Salicylic Acid Face Wash",
+    image: "/images/products/salicylic-acid-face-wash.png",
+  },
+  {
+    id: 3,
+    name: "Clindamycin Phosphate Topical Lotion",
+    image: "/images/products/clindamycin-lotion.png",
+  },
+  {
+    id: 4,
+    name: "Niacinamide Serum 10%",
+    image: "/images/products/niacinamide-serum.png",
+  },
+  {
+    id: 5,
+    name: "Puritan Zinc for Acne",
+    image: "/images/products/zinc-for-acne.png",
+  },
+  {
+    id: 6,
+    name: "CeraVe Hydrating Facial Cleanser",
+    image: "/images/products/CeraVe Hydrating Facial Cleanser.png",
+  },
+]
+
+export const reproductiveHealth = [
+  {
+    id: 1,
+    name: "Equate Pregnancy Test Kit",
+    image: "/images/products/equate-pregnancy-test-kit.png",
+  },
+  {
+    id: 2,
+    name: "Folic Acid Tablets 400mcg",
+    image: "/images/products/nature's field folite.png",
+  },
+  { 
+    id: 3, 
+    name: "Pregnacare - Him&Her Conception",
+    image: '/images/products/Pregnacare Him&Her Conception.png',  
+   
+
+  },
+   { id: 4, 
+    name: "Pregnacare - Before Conception",
+    image: '/images/products/Pregnacare before Conception.png',
+
+   },
+  {
+    id: 5,
+    name: "Ovulation Test Kit (Predicte",
+    image: "/images/products/predicte ovulation test kit.png",
+  },
+  {
+    id: 7,
+    name: "Manix Capsule",
+    image: "/images/products/manix.png",
+  },
+]
+
+
