@@ -35,7 +35,7 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto bg-gray-50 p-8 rounded-2xl shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
+    <div className="max-w-2xl mx-auto bg-gray-50 p-8 rounded-2xl md:shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <h2 className="text-2xl font-bold text-center text-blue-500 animate-slide-down md:py-2">
@@ -176,7 +176,7 @@ export default function RegisterForm() {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full py-6 bg-blue-500 hover:bg-blue-700 text-white text-md transition-all duration-300 rounded-lg shadow-md"
+            className="cursor-pointer w-full mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-md py-6 rounded-xl shadow-lg flex items-center justify-center gap-2 transition"
           >
             Create Account
           </Button>

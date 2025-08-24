@@ -31,7 +31,7 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto bg-gray-50 p-8 rounded-2xl shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
+    <div className="max-w-md mx-auto bg-gray-50 p-8 rounded-2xl md:shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <h2 className="text-xl font-bold text-center text-blue-500 animate-slide-down md:py-2">
@@ -77,7 +77,7 @@ export default function LoginForm() {
 
           <Button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-700 text-white text-md transition-all duration-300 py-6 rounded-lg shadow-md"
+            className="cursor-pointer w-full mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-6 text-md rounded-xl shadow-lg flex items-center justify-center gap-2 transition"
           >
             Login
           </Button>
