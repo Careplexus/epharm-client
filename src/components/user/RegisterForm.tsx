@@ -35,7 +35,7 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
+    <div className="max-w-2xl mx-auto bg-gray-50 p-8 rounded-2xl shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <h2 className="text-2xl font-bold text-center text-blue-500 animate-slide-down md:py-2">
@@ -51,7 +51,7 @@ export default function RegisterForm() {
                   <FormControl>
                     <Input
                       {...field}
-                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 bg-white"
+                      className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     />
                   </FormControl>
                   <FormMessage />
@@ -68,7 +68,7 @@ export default function RegisterForm() {
                     <Input
                       placeholder="example@email.com"
                       {...field}
-                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     />
                   </FormControl>
                   <FormMessage />
@@ -88,7 +88,7 @@ export default function RegisterForm() {
                   <FormControl>
                     <Input
                       {...field}
-                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     />
                   </FormControl>
                   <FormMessage />
@@ -104,7 +104,7 @@ export default function RegisterForm() {
                   <FormControl>
                     <Input
                       {...field}
-                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     />
                   </FormControl>
                   <FormMessage />
@@ -124,7 +124,7 @@ export default function RegisterForm() {
                   <Input
                     placeholder="e.g. +2348012345678"
                     {...field}
-                    className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   />
                 </FormControl>
                 <FormMessage />
@@ -145,7 +145,7 @@ export default function RegisterForm() {
                       type="password"
                       placeholder="••••••••"
                       {...field}
-                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     />
                   </FormControl>
                   <FormMessage />
@@ -164,7 +164,7 @@ export default function RegisterForm() {
                       type="password"
                       placeholder="••••••••"
                       {...field}
-                      className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     />
                   </FormControl>
                   <FormMessage />
@@ -176,7 +176,7 @@ export default function RegisterForm() {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 py-2 rounded-lg shadow-md"
+            className="w-full py-6 bg-blue-500 hover:bg-blue-700 text-white text-md transition-all duration-300 rounded-lg shadow-md"
           >
             Create Account
           </Button>

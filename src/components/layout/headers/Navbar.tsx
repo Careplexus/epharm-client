@@ -23,7 +23,7 @@ export default function Navbar() {
         <li>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none cursor-pointer hover:text-blue-600">
-             Medicines & Essentials
+             <h2 className="bg-white">Medicines & Essentials</h2>
             </DropdownMenuTrigger>
               <DropdownMenuContent>
               <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Tablets/> <span>Medicines</span></h3></Link></DropdownMenuItem>
@@ -38,7 +38,7 @@ export default function Navbar() {
         <li>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none cursor-pointer hover:text-blue-600">
-              Our Services
+              <h2 className="bg-white">Our Services</h2>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><MessageSquare /> <span>As a Pharmacist</span></h3></Link></DropdownMenuItem>

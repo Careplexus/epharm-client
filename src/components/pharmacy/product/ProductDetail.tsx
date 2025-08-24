@@ -55,10 +55,10 @@ export default function ProductDetail({ product }: { product: Product }) {
        
 
         <div className="flex flex-col sm:flex-row gap-3 pt-1 sm:pt-2">
-          <button   onClick={() => addCartItem(product.id)} className="bg-blue-600 text-white px-5 py-2 rounded-xl shadow hover:bg-blue-700 transition cursor-pointer">
+          <button   onClick={() => addCartItem(product.id)} className="bg-blue-500 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition cursor-pointer">
             Add to Cart
           </button>
-          <button className="bg-gray-200 px-5 py-2 rounded-xl shadow hover:bg-gray-300 transition cursor-pointer">
+          <button className="bg-gray-200 px-6 py-3 rounded-xl shadow hover:bg-gray-300 transition cursor-pointer">
             Buy Now
           </button>
         </div>

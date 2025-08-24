@@ -31,7 +31,7 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
+    <div className="max-w-md mx-auto bg-gray-50 p-8 rounded-2xl shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <h2 className="text-xl font-bold text-center text-blue-500 animate-slide-down md:py-2">
@@ -48,7 +48,7 @@ export default function LoginForm() {
                   <Input
                     {...field}
                     placeholder="Enter your username"
-                    className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="transition-all py-5 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   />
                 </FormControl>
                 <FormMessage />
@@ -67,7 +67,7 @@ export default function LoginForm() {
                     {...field}
                     type="password"
                     placeholder="Enter your password"
-                    className="transition-all focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="transition-all focus-visible:ring-2 py-5 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   />
                 </FormControl>
                 <FormMessage />
@@ -77,7 +77,7 @@ export default function LoginForm() {
 
           <Button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 py-2 rounded-lg shadow-md"
+            className="w-full bg-blue-500 hover:bg-blue-700 text-white text-md transition-all duration-300 py-6 rounded-lg shadow-md"
           >
             Login
           </Button>

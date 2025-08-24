@@ -57,8 +57,8 @@ export default function DeliveryAddressForm() {
   };
 
   return (
-    <section className="bg-white rounded-2xl shadow-md p-6">
-      <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-800 mb-4">
+    <section className="bg-white md:rounded-2xl md:shadow-md md:p-6">
+      <h2 className="flex items-center gap-2 text-2xl font-semibold text-gray-800 mb-4 tracking-widest uppercase">
         <MapPin className="text-blue-500" /> Delivery Address
       </h2>
 
