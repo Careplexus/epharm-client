@@ -22,7 +22,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const handleAddToCart = () => {
     addCartItem(product.id);
     setAdded(true);
-    setTimeout(() => setAdded(false), 2000); // reset after 2s
+    setTimeout(() => setAdded(false), 2000);
   };
 
   return (
@@ -35,12 +35,12 @@ export default function ProductCard({ product }: { product: Product }) {
           <motion.div 
             whileHover={{ scale: 1.05 }} 
             transition={{ type: "spring", stiffness: 200, damping: 15 }}
-            className="w-full h-[160px] overflow-hidden rounded-md"
+            className="w-full h-[160px] flex items-center justify-center rounded-md overflow-hidden bg-gray-50"
           >
             <img
               src={product.image}
               alt={product.name || "Pharmacy product"}
-              className="w-full h-full object-cover"
+              className="max-h-full max-w-full object-contain"
             />
           </motion.div>
         </Link>

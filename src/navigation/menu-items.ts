@@ -4,27 +4,27 @@ import { PillBottle,Tablets, Syringe, SoapDispenserDroplet,
 export const medicines_menu = [
   {
     title: "Medicines",
-    url: "/",
+    url: "/products",
     icon: Tablets,
   },
   {
     title: "Injectables",
-    url: "products/injectables",
+    url: "/products",
     icon: Syringe,
   },
   {
     title: "Supplements & Tonics",
-    url: "products/supplements",
+    url: "/products",
     icon: PillBottle,
   },
   {
     title: "Skincare",
-    url: "products/skincare",
+    url: "/products",
     icon: SoapDispenserDroplet,
   },
   {
     title: "Medical devices",
-    url: "products/medical-devices",
+    url: "/products",
     icon: Stethoscope,
   },
 ]
