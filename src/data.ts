@@ -21,32 +21,32 @@ export const products: Product[] = [
 
 export const dermaProducts = [
   {
-    id: 1,
+    id: 11,
     name: "Benzoyl Peroxide Gel 10%",
     image: "/images/products/benzoyl-peroxide-gel.png",
   },
   {
-    id: 2,
+    id: 12,
     name: "Salicylic Acid Face Wash",
     image: "/images/products/salicylic-acid-face-wash.png",
   },
   {
-    id: 3,
+    id: 13,
     name: "Clindamycin Phosphate Topical Lotion",
     image: "/images/products/clindamycin-lotion.png",
   },
   {
-    id: 4,
+    id: 14,
     name: "Niacinamide Serum 10%",
     image: "/images/products/niacinamide-serum.png",
   },
   {
-    id: 5,
+    id: 15,
     name: "Puritan Zinc for Acne",
     image: "/images/products/zinc-for-acne.png",
   },
   {
-    id: 6,
+    id: 16,
     name: "CeraVe Hydrating Facial Cleanser",
     image: "/images/products/CeraVe Hydrating Facial Cleanser.png",
   },
@@ -54,34 +54,34 @@ export const dermaProducts = [
 
 export const reproductiveHealth = [
   {
-    id: 1,
+    id: 17,
     name: "Equate Pregnancy Test Kit",
     image: "/images/products/equate-pregnancy-test-kit.png",
   },
   {
-    id: 2,
+    id: 18,
     name: "Folic Acid Tablets 400mcg",
     image: "/images/products/nature's field folite.png",
   },
   { 
-    id: 3, 
+    id: 19, 
     name: "Pregnacare - Him&Her Conception",
     image: '/images/products/Pregnacare Him&Her Conception.png',  
    
 
   },
-   { id: 4, 
+   { id: 20, 
     name: "Pregnacare - Before Conception",
     image: '/images/products/Pregnacare before Conception.png',
 
    },
   {
-    id: 5,
+    id: 21,
     name: "Ovulation Test Kit (Predicte",
     image: "/images/products/predicte ovulation test kit.png",
   },
   {
-    id: 7,
+    id: 22,
     name: "Manix Capsule",
     image: "/images/products/manix.png",
   },
