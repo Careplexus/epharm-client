@@ -28,8 +28,8 @@ export default function ProductSlider({
   return (
     <div className="w-full max-w-6xl mx-auto py-4">
       {title && (
-        <h2 className="flex justify-between items-center font-bold text-sm font-semibold mb-2 px-2 uppercase bg-blue-50/20 tracking-wide text-emerald-600">
-          <span>{title}</span>
+        <h2 className="flex justify-between items-center text-sm font-semibold mb-2 px-2 uppercase bg-blue-50/20 tracking-wide">
+          <span className="text-emerald-600">{title}</span>
           <span className="cursor-pointer bg-white w-7 h-7 rounded-lg flex justify-center items-center shadow-sm hover:shadow">
             <Maximize2 size={16} />
           </span>
