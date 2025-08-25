@@ -2,7 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 import { 
   MainLayoutPage, AuthLayoutPage,
-  ProductListPage, ProductDetailPage, RegisterPage, 
+  PopularCategoriesPage, ProductListPage, 
+  ProductDetailPage, RegisterPage, 
   LoginPage, NotFoundPage, CartPage,
   CheckoutPage, 
   DeliveryAddressPage,
@@ -13,7 +14,8 @@ function App() {
   return (
     <Routes>
       <Route element={<MainLayoutPage />}>
-        <Route path="/" element={<ProductListPage />} />
+        <Route path="/" element={<PopularCategoriesPage />} />
+        <Route path="/products" element={<ProductListPage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/products/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />

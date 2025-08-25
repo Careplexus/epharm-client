@@ -1,3 +1,4 @@
+import PopularCategoriesPage from "./products/PopularCategoriesPage";
 import ProductListPage from "./products/ProductListPage";
 import ProductDetailPage from "./products/ProductDetailPage";
 import NotFoundPage from "./errors/NotFoundPage";
@@ -18,6 +19,7 @@ export {
     LoginPage,
 
     // Pages
+    PopularCategoriesPage,
     ProductListPage,
     ProductDetailPage,
     NotFoundPage,

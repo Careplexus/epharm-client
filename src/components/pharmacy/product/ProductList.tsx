@@ -1,48 +1,75 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components";
+import { useState } from "react";
 import { ProductCard } from "@/components";
 import { products } from "@/data";
 import type { Product } from "@/types/product.type";
+import { Tabs, TabsContent} from "@/components";
+import { ChevronDown } from "lucide-react";
 
 type GroupedProducts = {
   [category: string]: Product[];
 };
 
-const grouped = products.reduce<GroupedProducts>((groups, product) => {
-  const { category } = product;
-  if (!category) return groups;
-  if (!groups[category]) groups[category] = [];
-  groups[category].push(product);
-  return groups;
-}, {});
+const grouped: GroupedProducts = {};
+products.forEach((product) => {
+  const cat = product.category || "Uncategorized";
+  if (!grouped[cat]) grouped[cat] = [];
+  grouped[cat].push(product);
+});
 
-const productCategories = Object.keys(grouped);
+const productCategories = ["All", ...Object.keys(grouped)];
 
-export default function ProductList() {
+export default function ProductList({ initialCategory }: { initialCategory?: string }) {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    initialCategory && productCategories.includes(initialCategory)
+      ? initialCategory
+      : productCategories[0]
+  );
+
+  const handleSelect = (category: string) => {
+    setSelectedCategory(category);
+    setDropdownOpen(false);
+  };
+
   return (
-    <Tabs defaultValue={productCategories[1]}>
-      <TabsList className="w-full h-12 md:w-2/3 my-4 bg-gray-50 md:bg-white rounded-sm flex flex-wrap">
-        {productCategories.map((category) => (
-          <TabsTrigger
-            key={category}
-            value={category}
-            className="font-semibold text-md cursor-pointer capitalize px-4 py-6 rounded bg-gray-50 md:m-1"
-          >
-            {category}
-          </TabsTrigger>
-        ))}
-      </TabsList>
+    <div className="w-full max-w-6xl mx-auto py-4">
+      <div className="relative w-48 mb-4">
+        <button
+          onClick={() => setDropdownOpen(!dropdownOpen)}
+          className="w-full flex justify-between items-center px-4 py-2 bg-gray-100 rounded-md shadow hover:bg-gray-200"
+        >
+          {selectedCategory}
+          <ChevronDown size={16} />
+        </button>
+        {dropdownOpen && (
+          <div className="absolute w-full mt-1 bg-white shadow-md rounded-md z-20">
+            {productCategories.map((category) => (
+              <div
+                key={category}
+                onClick={() => handleSelect(category)}
+                className={`px-4 py-2 cursor-pointer hover:bg-gray-100 capitalize ${
+                  category === selectedCategory ? "bg-gray-200 font-semibold" : ""
+                }`}
+              >
+                {category}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
 
-      {productCategories.map((category) => (
-        <TabsContent key={category} value={category}>
-          <div className="p-3 sm:p-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 place-items-center">
-              {grouped[category].map((product: Product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
+      <Tabs value={selectedCategory} className="w-full">
+        <TabsContent value={selectedCategory}>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 place-items-center">
+            {(selectedCategory === "All"
+              ? products
+              : grouped[selectedCategory] || []
+            ).map((product: Product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
         </TabsContent>
-      ))}
-    </Tabs>
+      </Tabs>
+    </div>
   );
 }

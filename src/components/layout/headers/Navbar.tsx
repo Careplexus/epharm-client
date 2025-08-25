@@ -26,11 +26,11 @@ export default function Navbar() {
              <h2 className="bg-white">Medicines & Essentials</h2>
             </DropdownMenuTrigger>
               <DropdownMenuContent>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Tablets/> <span>Medicines</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Syringe/> <span>Injectables</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><PillBottle/> <span>Supplements & Tonics</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><SoapDispenserDroplet/> <span>Skincare</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Stethoscope/> <span>Medical Devices</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><Tablets/> <span>Medicines</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><Syringe/> <span>Injectables</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><PillBottle/> <span>Supplements & Tonics</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><SoapDispenserDroplet/> <span>Skincare</span></h3></Link></DropdownMenuItem>
+              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><Stethoscope/> <span>Medical Devices</span></h3></Link></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
