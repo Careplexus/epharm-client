@@ -1,5 +1,5 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { PhoneCallIcon, PlusCircle, ShoppingCart } from "lucide-react";
+import { PhoneCallIcon, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
 import UserDropdown from "./UserDropdown";
 
@@ -19,9 +19,6 @@ export default function Topbar() {
       alt="Pharmacy Logo"
       className="h-8 w-8 md:h-10 md:w-10 object-contain transition-transform duration-300 hover:scale-105"
     />
-        <PlusCircle className="text-blue-600" size={20} />
-      </Link>
-
       <div className="flex items-center space-x-3">
         <div className="hidden md:flex items-center space-x-2">
           <PhoneCallIcon className="text-green-500" size={18} />
