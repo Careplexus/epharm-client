@@ -14,7 +14,11 @@ export default function Topbar() {
       </div>
 
       <Link to="/" className="flex items-center gap-1">
-        <h1 className="text-xl md:text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
+        <img
+      src="images/logo/pharmacy-logo.png"
+      alt="Pharmacy Logo"
+      className="h-8 w-8 md:h-10 md:w-10 object-contain transition-transform duration-300 hover:scale-105"
+    />
         <PlusCircle className="text-blue-600" size={20} />
       </Link>
 
