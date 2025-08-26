@@ -19,6 +19,8 @@ export default function Topbar() {
       alt="Pharmacy Logo"
       className="h-8 w-8 md:h-10 md:w-10 object-contain transition-transform duration-300 hover:scale-105"
     />
+</Link>
+
       <div className="flex items-center space-x-3">
         <div className="hidden md:flex items-center space-x-2">
           <PhoneCallIcon className="text-green-500" size={18} />
