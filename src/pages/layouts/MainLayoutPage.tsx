@@ -10,7 +10,7 @@ export default function MainLayoutPage() {
       <div className="min-h-screen pt-15 w-screen">
         <AppSidebar />
         <MainHeader />
-        <main className="flex-1 mx-0.5 mt-8 w-full">
+        <main className="flex-1 mx-0.5 mt-10 w-full">
           <ScrollToTop />
           <Outlet />
         </main>
