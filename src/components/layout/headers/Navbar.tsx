@@ -27,7 +27,6 @@ export default function Navbar() {
   <a href="/" className="flex items-center gap-2">
         <h1 className="text-xl md:text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
 <PlusCircle className="text-blue-600" size={20} />
-      </Link>
   </a>
 </div>
 
