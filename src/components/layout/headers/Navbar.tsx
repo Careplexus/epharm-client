@@ -20,7 +20,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="bg-white px-4 pt-1 pb-4 flex items-center justify-between">
+    <nav className="bg-white px-4 pt-1 pb-2 flex items-center justify-between">
       <div className="flex items-center">
         <Link to="/" className="hover:opacity-80 transition">
  <div className="flex items-center">
