@@ -14,6 +14,7 @@ import CheckoutForm  from "./pharmacy/checkout/CheckoutForm";
 import DeliveryAddressForm from "./pharmacy/checkout/DeliveryAddressForm";
 import ProductSlider from "./sliders/ProductSlider";
 import Input  from "./ui/input";
+import ProductSearch from "./search/product-search";
 import {Button} from './ui/button'
 import Separator from "./ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
@@ -48,6 +49,7 @@ export {
 
     // Common components
     QuantityInput,
+    ProductSearch,
 
     // Shadcn components
     Input,

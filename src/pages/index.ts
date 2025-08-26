@@ -9,12 +9,15 @@ import MainLayoutPage from "./layouts/MainLayoutPage";
 import AuthLayoutPage from "./layouts/AuthLayoutPage";
 import CheckoutPage from "./checkout/CheckoutPage";
 import DeliveryAddressPage from "./checkout/DeliveryAddressPage";
+import ScrollToTop from "./layouts/ScrollToTop";
+
 
 
 export {
     // Page Layouts
     MainLayoutPage,
     AuthLayoutPage,
+    ScrollToTop,
     RegisterPage,
     LoginPage,
 

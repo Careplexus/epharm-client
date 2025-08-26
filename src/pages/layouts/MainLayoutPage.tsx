@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { SidebarProvider } from "@/components/ui/sidebar"
 import { AppSidebar, Footer, MainHeader } from "@/components";
+import ScrollToTop from "./ScrollToTop";
 
 
 export default function MainLayoutPage() {
@@ -10,6 +11,7 @@ export default function MainLayoutPage() {
         <AppSidebar />
         <MainHeader />
         <main className="flex-1 mx-0.5 mt-16 w-full">
+          <ScrollToTop />
           <Outlet />
         </main>
         <Footer />

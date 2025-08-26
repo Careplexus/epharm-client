@@ -1,49 +1,98 @@
-import { PillBottle,Tablets, Syringe, SoapDispenserDroplet, 
-    Stethoscope, MessageSquare, ClipboardList, Truck, PlusCircle} from "lucide-react"
+import {
+  PillBottle,
+  Tablets,
+  Syringe,
+  SoapDispenserDroplet,
+  Stethoscope,
+  MessageSquare,
+  ClipboardList,
+  Truck,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  ProductSearch,
 } from "@/components";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow-md py-2 px-4 flex flex-col md:flex-row md:justify-between items-center">
-      <div className="hidden md:flex items-center gap-1">
-        <Link to="/" className="flex items-center gap-1">
-          <h1 className="text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
-          <PlusCircle className="text-blue-500" size={20} />
+    <nav className="bg-white px-4 py-3 flex items-center justify-between">
+      <div className="flex items-center">
+        <Link to="/" className="hover:opacity-80 transition">
+ <div className="flex items-center">
+  <a href="/" className="flex items-center gap-2">
+    <img
+      src="images/logo/pharmacy-logo.png"
+      alt="Pharmacy Logo"
+      className="h-8 w-8 md:h-10 md:w-10 object-contain transition-transform duration-300 hover:scale-105"
+    />
+  </a>
+</div>
+
         </Link>
       </div>
 
-      {/* Navigation Links */}
-      <ul className="hidden md:flex gap-10 items-center">
+      {/* Middle - Nav Links */}
+      <ul className="hidden md:flex gap-8 items-center text-sm font-semibold">
         <li>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none cursor-pointer hover:text-blue-600">
-             <h2 className="bg-white">Medicines & Essentials</h2>
+            <DropdownMenuTrigger className="text-slate-800 hover:text-blue-600 transition outline-none cursor-pointer">
+              Medicines & Essentials
             </DropdownMenuTrigger>
-              <DropdownMenuContent>
-              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><Tablets/> <span>Medicines</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><Syringe/> <span>Injectables</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><PillBottle/> <span>Supplements & Tonics</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><SoapDispenserDroplet/> <span>Skincare</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/products'><h3 className="flex gap-2"><Stethoscope/> <span>Medical Devices</span></h3></Link></DropdownMenuItem>
+            <DropdownMenuContent className="w-56">
+              <DropdownMenuItem>
+                <Link to="/products" className="flex gap-2 items-center">
+                  <Tablets /> <span>Medicines</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/products" className="flex gap-2 items-center">
+                  <Syringe /> <span>Injectables</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/products" className="flex gap-2 items-center">
+                  <PillBottle /> <span>Supplements & Tonics</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/products" className="flex gap-2 items-center">
+                  <SoapDispenserDroplet /> <span>Skincare</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/products" className="flex gap-2 items-center">
+                  <Stethoscope /> <span>Medical Devices</span>
+                </Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
 
         <li>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-slate-800 font-semibold outline-none cursor-pointer hover:text-blue-600">
-              <h2 className="bg-white">Our Services</h2>
+            <DropdownMenuTrigger className="text-slate-800 hover:text-blue-600 transition outline-none cursor-pointer">
+              Our Services
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><MessageSquare /> <span>As a Pharmacist</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><ClipboardList /> <span>Medications Review</span></h3></Link></DropdownMenuItem>
-              <DropdownMenuItem><Link to='/'><h3 className="flex gap-2"><Truck /> <span>Home Delivery</span></h3></Link></DropdownMenuItem>
+            <DropdownMenuContent className="w-56">
+              <DropdownMenuItem>
+                <Link to="/" className="flex gap-2 items-center">
+                  <MessageSquare /> <span>As a Pharmacist</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/" className="flex gap-2 items-center">
+                  <ClipboardList /> <span>Medications Review</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/" className="flex gap-2 items-center">
+                  <Truck /> <span>Home Delivery</span>
+                </Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
@@ -51,7 +100,7 @@ export default function Navbar() {
         <li>
           <Link
             to="/about-us"
-            className="text-slate-800 font-semibold hover:text-blue-600"
+            className="text-slate-800 hover:text-blue-600 transition"
           >
             About Us
           </Link>
@@ -60,22 +109,16 @@ export default function Navbar() {
         <li>
           <Link
             to="/contact-us"
-            className="text-slate-800 font-semibold hover:text-blue-600"
+            className="text-slate-800 hover:text-blue-600 transition"
           >
             Contact
           </Link>
         </li>
       </ul>
 
-      {/* Search Bar */}
-      <div className="ml-4 w-full md:w-40 sm:w-64">
-        <form>
-          <input
-            type="text"
-            placeholder="Search products..."
-            className="w-full h-9 px-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
-          />
-        </form>
+      {/* Right - Search */}
+      <div className="flex items-center">
+        <ProductSearch />
       </div>
     </nav>
   );
