@@ -8,7 +8,7 @@ export default function Topbar() {
 
 
   return (
-    <section className="px-4 py-3 flex justify-between items-center relative">
+    <section className="px-4 pt-3 flex justify-between items-center relative">
       <div className="md:hidden">
         <SidebarTrigger />
       </div>
