@@ -24,11 +24,7 @@ export default function Navbar() {
         <Link to="/" className="hover:opacity-80 transition">
  <div className="flex items-center">
   <a href="/" className="flex items-center gap-2">
-    <img
-      src="images/logo/pharmacy-logo.png"
-      alt="Pharmacy Logo"
-      className="h-8 w-8 md:h-10 md:w-10 object-contain transition-transform duration-300 hover:scale-105"
-    />
+        <h1 className="text-xl md:text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
   </a>
 </div>
 
