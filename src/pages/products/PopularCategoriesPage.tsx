@@ -10,7 +10,7 @@ export default function PopularCategoriesPage() {
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:px-2 pb-10 max-w-7xl mx-auto">
       
       <main className="md:col-span-3 space-y-6">
-      <h1 className=" text-xl text-center me:text-left md:text-3xl font-bold tracking-wide mb-2 text-white bg-purple-600 rounded-md py-3">
+      <h1 className=" text-xl text-center me:text-left md:text-3xl font-bold tracking-wide mb-2 text-white bg-red-600 rounded-md py-4">
   SMART PHARMACY CATALOGUE
 </h1>
 
