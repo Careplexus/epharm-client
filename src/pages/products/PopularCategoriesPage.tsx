@@ -10,9 +10,11 @@ export default function PopularCategoriesPage() {
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:px-2 pb-10 max-w-7xl mx-auto">
       
       <main className="md:col-span-3 space-y-6">
-        <h1 className="text-xl font-bold text-gray-800 tracking-wide mb-2 ml-2">
-          SMART PHARMACY CATALOGUE
-        </h1>
+       <h1 className="text-2xl md:text-4xl font-extrabold tracking-wide mb-4 ml-2 
+               bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 
+               text-white p-4 rounded-lg shadow-lg">
+  SMART PHARMACY CATALOGUE
+</h1>
 
         <div className="space-y-6 md:mx-6">
           {categories.map((category) => {
