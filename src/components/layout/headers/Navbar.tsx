@@ -7,6 +7,7 @@ import {
   MessageSquare,
   ClipboardList,
   Truck,
+  PlusCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -25,6 +26,8 @@ export default function Navbar() {
  <div className="flex items-center">
   <a href="/" className="flex items-center gap-2">
         <h1 className="text-xl md:text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
+<PlusCircle className="text-blue-600" size={20} />
+      </Link>
   </a>
 </div>
 
