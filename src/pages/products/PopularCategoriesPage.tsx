@@ -12,7 +12,7 @@ export default function PopularCategoriesPage() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-xl md:text-3xl font-bold tracking-wide text-center md:text-left mb-3 py-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent uppercase"
+          className="text-lg md:text-3xl font-bold tracking-wide text-center md:text-left mb-3 py-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent uppercase"
         >
           Careplexus Pharmacy Catalogue
         </motion.h1>

@@ -14,11 +14,14 @@ export default function Navbar() {
     <nav className="bg-white px-4 pt-3 pb-2 flex items-center justify-between">
       <div className="flex items-center">
       <Link to="/" className="hover:opacity-90 transition-transform transform hover:scale-105">
-        <div className="flex items-center gap-1 md:gap-2">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-gray-800 tracking-tight uppercase">
-            CP
-          </h1>
-          <PlusCircle className="text-blue-600" size={24} />
+        <div className="relative inline-block">
+        <h1 className="text-2xl md:text-3xl font-extrabold text-gray-800 tracking-tight uppercase">
+          CPLX
+        </h1>
+        <PlusCircle
+          className="text-blue-600 absolute -top-1 md:-top-1 right-[-13px]"
+          size={16}
+        />
         </div>
       </Link>
 
