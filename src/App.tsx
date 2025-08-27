@@ -2,7 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import { 
   MainLayoutPage, AuthLayoutPage,
-  PopularCategoriesPage, ProductListPage, 
+  PopularCategoriesPage, ProductCategoryPage, 
   ProductDetailPage, RegisterPage, 
   LoginPage, NotFoundPage, CartPage,
   CheckoutPage, 
@@ -16,7 +16,7 @@ function App() {
     <Routes>
       <Route element={<MainLayoutPage />}>
         <Route path="/" element={<PopularCategoriesPage />} />
-        <Route path="/products" element={<ProductListPage />} />
+          <Route path="/products/:category" element={<ProductCategoryPage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
         <Route path="/products/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />

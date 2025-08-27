@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Heart, Maximize2 } from "lucide-react";
+import { slugify } from "@/lib/slugify";
 
 interface Product {
   id: string | number;
@@ -37,12 +38,20 @@ export default function ProductSlider({
   return (
     <div className="w-full max-w-6xl mx-auto py-4">
       {title && (
-        <h2 className="flex justify-between items-center text-sm font-semibold mb-2 px-2 uppercase bg-blue-50/20 tracking-wide">
-          <span className="text-emerald-600">{title}</span>
-          <span className="cursor-pointer bg-white w-7 h-7 rounded-lg flex justify-center items-center shadow-sm hover:shadow">
-            <Link to="/products"><Maximize2 size={16} /></Link>
-          </span>
-        </h2>
+            <motion.h2 
+      initial={{ opacity: 0, y: -12 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="flex justify-between items-center text-base sm:text-sm font-semibold mb-3 px-3 py-2 rounded-sm tracking-wide bg-gradient-to-r from-indigo-100 via-blue-50 to-white md:bg-gray-50/50 shadow-sm"
+    >
+      <span className="text-indigo-600 sm:text-emerald-600 font-bold sm:font-semibold">{title}</span>
+      <span className="cursor-pointer bg-white w-9 h-9 sm:w-7 sm:h-7 rounded-lg flex justify-center items-center shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <Link to={`/products/${slugify(title || "")}`}>
+          <Maximize2 size={18} className="text-indigo-600 sm:text-emerald-600" />
+        </Link>
+      </span>
+    </motion.h2>
+
       )}
 
       <Carousel className="w-full bg-blue-50/20 relative shadow-sm rounded-lg">
@@ -81,12 +90,21 @@ export default function ProductSlider({
                   onClick={() => handleClick(item.id)}
                 >
                   <div className="w-full flex items-center justify-center">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain"
-                    />
-                  </div>
+                  <motion.img
+                    src={item.image}
+                    alt={item.name}
+                    className="
+                      h-28 w-28         
+                      sm:h-24 sm:w-24    
+                      md:h-24 md:w-24   
+                      object-contain
+                      max-w-full max-h-full
+                    "
+                    whileHover={{ scale: 1.08 }}   // smooth hover zoom
+                    whileTap={{ scale: 0.95 }}     // subtle feedback on tap (great UX)
+                    transition={{ type: "spring", stiffness: 300 }}
+                  />
+                </div>
                   <p className="mt-2 text-xs sm:text-sm font-medium text-gray-700 text-center line-clamp-1">
                     {item.name}
                   </p>

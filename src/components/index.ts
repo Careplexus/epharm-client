@@ -2,7 +2,7 @@ import AppSidebar from "./layout/AppSidebar";
 import MainHeader from "./layout/headers/MainHeader";
 import Footer from "./layout/footer/Footer";
 import ProductCard from "./pharmacy/product/ProductCard";
-import ProductList from "./pharmacy/product/ProductList";
+import ProductCategoryFilter from "./pharmacy/product/ProductCategoryFilter";
 import ProductDetail from "./pharmacy/product/ProductDetail";
 import Cart from "./pharmacy/cart/Cart";
 import CartSummary from "./pharmacy/cart/CartSummary";
@@ -37,7 +37,7 @@ export {
     ProductDetail,
     Cart,
     CartSummary,
-    ProductList,
+    ProductCategoryFilter,
     CheckoutForm,
     DeliveryAddressForm,
     ProductSlider,

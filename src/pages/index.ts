@@ -1,5 +1,5 @@
 import PopularCategoriesPage from "./products/PopularCategoriesPage";
-import ProductListPage from "./products/ProductListPage";
+import ProductCategoryPage from "./products/ProductCategoryPage";
 import ProductDetailPage from "./products/ProductDetailPage";
 import NotFoundPage from "./errors/NotFoundPage";
 import CartPage from "./cart/CartPage";
@@ -23,7 +23,7 @@ export {
 
     // Pages
     PopularCategoriesPage,
-    ProductListPage,
+    ProductCategoryPage,
     ProductDetailPage,
     NotFoundPage,
     CartPage,

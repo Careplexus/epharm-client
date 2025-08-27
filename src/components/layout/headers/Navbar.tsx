@@ -1,15 +1,5 @@
-import {
-  PillBottle,
-  Tablets,
-  Syringe,
-  SoapDispenserDroplet,
-  Stethoscope,
-  MessageSquare,
-  ClipboardList,
-  Truck,
-  PlusCircle,
-} from "lucide-react";
 import { Link } from "react-router-dom";
+import { medicines_menu, services_menu } from "@/navigation/menu-items";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,80 +7,54 @@ import {
   DropdownMenuTrigger,
   ProductSearch,
 } from "@/components";
+import { PlusCircle } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white px-4 pt-1 pb-2 flex items-center justify-between">
+    <nav className="bg-white px-4 pt-3 pb-2 flex items-center justify-between">
       <div className="flex items-center">
-        <Link to="/" className="hover:opacity-80 transition">
- <div className="flex items-center">
-  <a href="/" className="flex items-center gap-2">
-        <h1 className="text-xl md:text-2xl font-bold text-gray-800">CAREPLEXUS</h1>
-<PlusCircle className="text-blue-600" size={20} />
-  </a>
-</div>
+      <Link to="/" className="hover:opacity-90 transition-transform transform hover:scale-105">
+        <div className="flex items-center gap-1 md:gap-2">
+          <h1 className="text-2xl md:text-3xl font-extrabold text-gray-800 tracking-tight uppercase">
+            CP
+          </h1>
+          <PlusCircle className="text-blue-600" size={24} />
+        </div>
+      </Link>
 
-        </Link>
       </div>
 
-      {/* Middle - Nav Links */}
       <ul className="hidden md:flex gap-8 items-center text-sm font-semibold">
         <li>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-slate-800 hover:text-blue-600 transition outline-none cursor-pointer">
+            <DropdownMenuTrigger className="text-slate-800 text-lg hover:text-blue-600 transition outline-none cursor-pointer">
               Medicines & Essentials
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuItem>
-                <Link to="/products" className="flex gap-2 items-center">
-                  <Tablets /> <span>Medicines</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/products" className="flex gap-2 items-center">
-                  <Syringe /> <span>Injectables</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/products" className="flex gap-2 items-center">
-                  <PillBottle /> <span>Supplements & Tonics</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/products" className="flex gap-2 items-center">
-                  <SoapDispenserDroplet /> <span>Skincare</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/products" className="flex gap-2 items-center">
-                  <Stethoscope /> <span>Medical Devices</span>
-                </Link>
-              </DropdownMenuItem>
+              {medicines_menu.map((item) => (
+                <DropdownMenuItem key={item.title}>
+                  <Link to={item.url} className="flex gap-2 items-center">
+                    <item.icon /> <span>{item.title}</span>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
 
         <li>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-slate-800 hover:text-blue-600 transition outline-none cursor-pointer">
+            <DropdownMenuTrigger className="text-slate-800 text-lg hover:text-blue-600 transition outline-none cursor-pointer">
               Our Services
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuItem>
-                <Link to="/" className="flex gap-2 items-center">
-                  <MessageSquare /> <span>As a Pharmacist</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/" className="flex gap-2 items-center">
-                  <ClipboardList /> <span>Medications Review</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/" className="flex gap-2 items-center">
-                  <Truck /> <span>Home Delivery</span>
-                </Link>
-              </DropdownMenuItem>
+              {services_menu.map((item) => (
+                <DropdownMenuItem key={item.title}>
+                  <Link to={item.url} className="flex gap-2 items-center">
+                    <item.icon /> <span>{item.title}</span>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
@@ -98,7 +62,7 @@ export default function Navbar() {
         <li>
           <Link
             to="/about-us"
-            className="text-slate-800 hover:text-blue-600 transition"
+            className="text-slate-800 hover:text-blue-600 transition text-lg"
           >
             About Us
           </Link>
@@ -107,14 +71,13 @@ export default function Navbar() {
         <li>
           <Link
             to="/contact-us"
-            className="text-slate-800 hover:text-blue-600 transition"
+            className="text-slate-800 hover:text-blue-600 transition text-lg"
           >
             Contact
           </Link>
         </li>
       </ul>
 
-      {/* Right - Search */}
       <div className="flex items-center">
         <ProductSearch />
       </div>

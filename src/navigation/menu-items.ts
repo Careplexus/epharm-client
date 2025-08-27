@@ -1,33 +1,34 @@
-import { PillBottle, Tablets, Syringe, SoapDispenserDroplet, 
-    Stethoscope, MessageSquare, ClipboardList, Truck } from "lucide-react"
+import { PillBottle, Tablets, SoapDispenserDroplet, 
+    Stethoscope, Truck, MessageSquare, ClipboardList } from "lucide-react";
+import { slugify } from "@/lib/slugify";
 
 export const medicines_menu = [
   {
     title: "Medicines",
-    url: "/products?category=medicines",
+    url: `/products/${slugify("Medicines")}`,
     icon: Tablets,
   },
   {
-    title: "Injectables",
-    url: "/products?category=injectables",
-    icon: Syringe,
-  },
-  {
     title: "Supplements & Tonics",
-    url: "/products?category=supplements",
+    url: `/products/${slugify("Vitamins & Supplements")}`,
     icon: PillBottle,
   },
   {
-    title: "Dermaceuticals",
-    url: "/products?category=dermaceuticals",
+    title: "Dermaceuticals/Skincare",
+    url: `/products/${slugify("Dermaceuticals / Skincare")}`,
     icon: SoapDispenserDroplet,
   },
   {
-    title: "Medical devices",
-    url: "/products?category=devices",
+    title: "Medical Devices",
+    url: `/products/${slugify("Medical Devices & Health Tools")}`,
     icon: Stethoscope,
   },
-]
+  {
+    title: "Mother & Child Care",
+    url: `/products/${slugify("Mother & Child Care")}`,
+    icon: Truck,
+  },
+];
 
 export const services_menu = [
   {
@@ -45,4 +46,4 @@ export const services_menu = [
     url: "delivery",
     icon: Truck,
   },
-]
+];

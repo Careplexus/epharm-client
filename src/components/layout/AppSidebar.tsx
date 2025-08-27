@@ -14,8 +14,17 @@ import { medicines_menu, services_menu } from "@/navigation/menu-items"
 import { ChevronDown, ChevronUp, User2, Info, Mail } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Collapsible, CollapsibleTrigger, CollapsibleContent  } from "../ui/collapsible"
+import useSidebar from "@/hooks/useSidebar"
 
 export default function AppSidebar() {
+
+  const { isMobile, setOpenMobile } = useSidebar();
+  
+const handleLinkClick = () => {
+  if (isMobile) {
+    setOpenMobile(false);
+  }
+};
   return (
     <Sidebar side="right">
       <SidebarContent>
@@ -35,7 +44,7 @@ export default function AppSidebar() {
                       {medicines_menu.map((item)=>(
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild>
-                            <Link to={item.url}>
+                            <Link to={item.url} onClick={handleLinkClick}>
                               <item.icon />
                               <span>{item.title}</span>
                             </Link>

@@ -20,7 +20,9 @@ export default function ProductSearchOverlay() {
         aria-label="Open search"
         className="ml-auto md:ml-0"
       >
-        <Search className="h-5 w-5" />
+        <Search   
+            size={32}
+            className="text-gray-700 transition-transform transform hover:scale-110" />
       </Button>
 
       {open && (

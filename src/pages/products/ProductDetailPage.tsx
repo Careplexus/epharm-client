@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 
 export default function ProductDetailPage() {
     const { id } = useParams<{ id: string }>();
-    const productId = Number(id); // `parseInt` is fine but `Number` handles null and empty strings better
+    const productId = Number(id); 
 
     const product = products.find((p) => p.id === productId);
 
