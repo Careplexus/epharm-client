@@ -15,7 +15,7 @@ export default function Topbar() {
   </div>
 
   {/* Center: Logo */}
-  <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-1">
+  <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-1 pr-6">
     <Link to="/" className="flex items-center gap-1">
       <img
         src="images/logo/mortal-pestle-logo.svg"

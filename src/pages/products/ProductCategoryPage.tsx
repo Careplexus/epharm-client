@@ -32,7 +32,7 @@ if (!matchedCategory)
 
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:px-2 pb-10 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:px-2 pb-10 pt-3 max-w-7xl mx-auto">
       <motion.main
         className="md:col-span-3 space-y-4"
         initial={{ opacity: 0, y: 20 }}
