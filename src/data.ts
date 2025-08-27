@@ -1,12 +1,4 @@
-export type Product = {
-  id: number;
-  image: string;
-  name: string;
-  pack_size?: string;
-  category: string;    
-  subcategory?: string;
-  price: string;
-};
+export type Product = { id: number; image: string; name: string; pack_size?: string; category: string; subcategory?: string; price: string; };
 
 export const products: Product[] = [
   // Dermaceuticals / Skincare
@@ -32,13 +24,16 @@ export const products: Product[] = [
   { id: 18, image: '/images/products/feroglobin-liquid-front-CTFER200L7WL6E_resized.png', name: "Feroglobin Syrup", pack_size: '', category: "Vitamins & Supplements", subcategory: "Tonics", price: "10000" },
 
   // Mother & Child Care
-  // Example (to add later)
-  // { id: 19, image: '/images/products/baby-formula.png', name: "Baby Formula", category: "Mother & Child Care", subcategory: "Infant Formula", price: "15000" },
+  { id: 19, image: '/images/products/aptamil 3.png', name: "Baby Formula", pack_size: '', category: "Mother & Child Care", subcategory: "Infant Formula", price: "15000" },
+  { id: 20, image: '/images/products/stayfree - maxi.png', name: "Maternity Pads", pack_size: '', category: "Mother & Child Care", subcategory: "Postnatal Care", price: "3500" },
+  { id: 21, image: '/images/products/baby nursing bottle 240ml.png', name: "Baby Nursing Bottle 240ml", pack_size: '', category: "Mother & Child Care", subcategory: "Feeding Essentials", price: "4000" },
 
   // Medical Devices & Health Tools
-  { id: 19, image: "/images/products/equate-pregnancy-test-kit.png", name: "Equate Pregnancy Test Kit", pack_size: '', category: "Medical Devices & Health Tools", subcategory: "Test Kits", price: "2500" },
-  { id: 20, image: "/images/products/predicte ovulation test kit.png", name: "Ovulation Test Kit (Predicte)", pack_size: '', category: "Medical Devices & Health Tools", subcategory: "Test Kits", price: "3500" },
+  { id: 22, image: "/images/products/equate-pregnancy-test-kit.png", name: "Equate Pregnancy Test Kit", pack_size: '', category: "Medical Devices & Health Tools", subcategory: "Test Kits", price: "2500" },
+  { id: 23, image: "/images/products/predicte ovulation test kit.png", name: "Ovulation Test Kit (Predicte)", pack_size: '', category: "Medical Devices & Health Tools", subcategory: "Test Kits", price: "3500" },
 
   // Medicines
-  // (Empty for now — add Antibiotics, Antihypertensives, etc. later)
+  { id: 24, image: "/images/products/coartem DS.png", name: "Coartem", pack_size: '', category: "Medicines", subcategory: "Antimalarials", price: "5000" },
+  { id: 25, image: "/images/products/celecoxib 200mg (celebrex).png", name: "Celebrex", pack_size: '', category: "Medicines", subcategory: "Pain Relief / NSAIDs", price: "8000" },
+  { id: 26, image: "/images/products/loperamide 2mg (imodium).png", name: "Imodium", pack_size: '', category: "Medicines", subcategory: "Anti-diarrheal", price: "3500" },
 ];

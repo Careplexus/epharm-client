@@ -53,7 +53,6 @@ export default function ProductSlider({
     </motion.h2>
 
       )}
-
       <Carousel className="w-full bg-blue-50/20 relative shadow-sm rounded-lg">
         <CarouselContent className="flex">
           {products.map((item, i) => (
