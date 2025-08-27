@@ -42,7 +42,7 @@ export default function ProductSlider({
       initial={{ opacity: 0, y: -12 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="flex justify-between items-center text-base sm:text-sm font-semibold mb-3 px-3 py-2 rounded-sm tracking-wide bg-gradient-to-r from-indigo-100 via-blue-50 to-white md:bg-gray-50/50 shadow-sm"
+      className="flex justify-between items-center text-sm md:text-md font-semibold mb-3 px-3 py-2 rounded-sm tracking-wide bg-gradient-to-r from-indigo-100 via-blue-50 to-white md:bg-gray-50/50 shadow-sm"
     >
       <span className="text-indigo-600 sm:text-emerald-600 font-bold sm:font-semibold">{title}</span>
       <span className="cursor-pointer bg-white w-9 h-9 sm:w-7 sm:h-7 rounded-lg flex justify-center items-center shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
