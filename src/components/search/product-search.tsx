@@ -13,17 +13,15 @@ export default function ProductSearchOverlay() {
 
   return (
     <div className="flex w-full justify-end md:justify-start">
-      <Button
+        <Button
         variant="ghost"
         size="icon"
         onClick={toggleSearch}
         aria-label="Open search"
-        className="ml-auto md:ml-0"
-      >
-        <Search   
-            size={32}
-            className="text-gray-700 transition-transform transform hover:scale-110" />
-      </Button>
+        className="ml-auto md:ml-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-md p-2 cursor-pointer"
+        >
+        <Search size={32} />
+        </Button>
 
       {open && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-4">
@@ -42,7 +40,7 @@ export default function ProductSearchOverlay() {
               variant="ghost"
               size="icon"
               onClick={toggleSearch}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full hover:bg-muted"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full hover:bg-muted cursor-pointer"
             >
               <X className="h-5 w-5 text-gray-300" />
             </Button>

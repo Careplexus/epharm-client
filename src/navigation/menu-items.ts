@@ -1,5 +1,6 @@
 import { PillBottle, Tablets, SoapDispenserDroplet, 
-    Stethoscope, Truck, MessageSquare, ClipboardList } from "lucide-react";
+    Stethoscope, Truck, MessageSquare, ClipboardList, 
+    Leaf} from "lucide-react";
 import { slugify } from "@/lib/slugify";
 
 export const medicines_menu = [
@@ -9,9 +10,14 @@ export const medicines_menu = [
     icon: Tablets,
   },
   {
-    title: "Supplements & Tonics",
+    title: "Vitamins & Supplements",
     url: `/products/${slugify("Vitamins & Supplements")}`,
     icon: PillBottle,
+  },
+    {
+    title: "Herbal Products",
+    url: `/products/${slugify("Herbal Products")}`,
+    icon: Leaf,
   },
   {
     title: "Dermaceuticals/Skincare",

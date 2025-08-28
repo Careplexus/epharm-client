@@ -30,7 +30,7 @@ export default function Navbar() {
       <ul className="hidden md:flex gap-8 items-center text-sm font-semibold">
         <li>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-slate-800 text-lg hover:text-blue-600 transition outline-none cursor-pointer">
+            <DropdownMenuTrigger className="text-slate-800 font-bold text-lg hover:text-blue-600 transition outline-none cursor-pointer">
               Medicines & Essentials
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
@@ -47,7 +47,7 @@ export default function Navbar() {
 
         <li>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-slate-800 text-lg hover:text-blue-600 transition outline-none cursor-pointer">
+            <DropdownMenuTrigger className="text-slate-800 text-lg font-bold hover:text-blue-600 transition outline-none cursor-pointer">
               Our Services
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
@@ -65,7 +65,7 @@ export default function Navbar() {
         <li>
           <Link
             to="/about-us"
-            className="text-slate-800 hover:text-blue-600 transition text-lg"
+            className="text-slate-800 hover:text-blue-600 transition text-lg font-bold"
           >
             About Us
           </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
         <li>
           <Link
             to="/contact-us"
-            className="text-slate-800 hover:text-blue-600 transition text-lg"
+            className="text-slate-800 hover:text-blue-600 transition text-lg font-bold"
           >
             Contact
           </Link>

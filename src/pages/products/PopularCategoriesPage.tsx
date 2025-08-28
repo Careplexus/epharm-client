@@ -1,7 +1,7 @@
 import { ProductSlider } from "@/components";
 import { products } from "@/data";
 import { motion } from "framer-motion";
-import { Leaf, Package, Tablet, Truck } from "lucide-react";
+import { Leaf, Package, Pill, Truck } from "lucide-react";
 
 export default function PopularCategoriesPage() {
   const categories = Array.from(new Set(products.map((product) => product.category)));
@@ -33,8 +33,8 @@ export default function PopularCategoriesPage() {
               }}
             >
               <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 mr-10 flex items-center gap-2">
-                Welcome to Careplexus Pharmacy — your trusted source for
-                <Tablet className="inline text-blue-500" size={16} /> medicines,
+                Welcome to Careplexus E-Pharmacy — your trusted source for
+                <Pill className="inline text-blue-500" size={16} /> medicines,
                 <Leaf className="inline text-green-500" size={16} /> supplements,
                 <Package className="inline text-purple-500" size={16} /> medical devices,
                 with <Truck className="inline text-orange-500" size={16} /> fast delivery,
@@ -42,8 +42,8 @@ export default function PopularCategoriesPage() {
               </p>
 
               <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 mr-10 flex items-center gap-2">
-                Welcome to Careplexus Pharmacy — your trusted source for
-                <Tablet className="inline text-blue-500" size={16} /> medicines,
+                Welcome to Careplexus  E-Pharmacy — your trusted source for
+                <Pill className="inline text-blue-500" size={16} /> medicines,
                 <Leaf className="inline text-green-500" size={16} /> supplements,
                 <Package className="inline text-purple-500" size={16} /> medical devices,
                 with <Truck className="inline text-orange-500" size={16} /> fast delivery,

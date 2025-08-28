@@ -34,7 +34,7 @@ const handleLinkClick = () => {
                 <SidebarGroup>
                   <SidebarGroupLabel asChild>
                     <CollapsibleTrigger>
-                      Medicines & Essentials
+                      <h3 className="font-bold">Medicines & Essentials</h3>
                       <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
                     </CollapsibleTrigger>
                   </SidebarGroupLabel>
@@ -60,7 +60,7 @@ const handleLinkClick = () => {
                 <SidebarGroup>
                   <SidebarGroupLabel asChild>
                     <CollapsibleTrigger>
-                      Our Services
+                      <h3 className="font-bold">Our Services</h3>
                       <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
                     </CollapsibleTrigger>
                   </SidebarGroupLabel>
