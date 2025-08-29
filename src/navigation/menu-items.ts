@@ -1,6 +1,6 @@
 import { PillBottle, Tablets, SoapDispenserDroplet, 
     Stethoscope, Truck, MessageSquare, ClipboardList, 
-    Leaf} from "lucide-react";
+    Leaf, Baby } from "lucide-react";
 import { slugify } from "@/lib/slugify";
 
 export const medicines_menu = [
@@ -32,7 +32,7 @@ export const medicines_menu = [
   {
     title: "Mother & Child Care",
     url: `/products/${slugify("Mother & Child Care")}`,
-    icon: Truck,
+    icon: Baby,
   },
 ];
 
