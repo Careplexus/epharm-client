@@ -1,7 +1,7 @@
 import { ProductSlider } from "@/components";
 import { products } from "@/data";
 import { motion } from "framer-motion";
-import { Leaf, Package, Pill, Truck } from "lucide-react";
+import { Leaf, crossSquare, Pill, Truck } from "lucide-react";
 
 export default function PopularCategoriesPage() {
   const categories = Array.from(new Set(products.map((product) => product.category)));
@@ -32,23 +32,24 @@ export default function PopularCategoriesPage() {
                 }
               }}
             >
-              <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 mr-10 flex items-center gap-2">
-                Welcome to Careplexus E-Pharmacy — your trusted source for
-                <Pill className="inline text-blue-500" size={16} /> medicines,
-                <Leaf className="inline text-green-500" size={16} /> supplements,
-                <Package className="inline text-purple-500" size={16} /> medical devices,
-                with <Truck className="inline text-orange-500" size={16} /> fast delivery,
-                guaranteed quality, and expert care.
-              </p>
+            <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 mr-10 flex items-center gap-2">
+  At Careplexus E-Pharmacy, pharmacists lead the way — ensuring you get
+  <Pill className="inline text-blue-500" size={16} /> safe medicines,
+  <Leaf className="inline text-green-500" size={16} /> reliable supplements,
+  <crossSquare className="inline text-purple-500" size={16} /> quality medical devices,
+  with <Truck className="inline text-orange-500" size={16} /> fast delivery,
+  guaranteed authenticity, and professional care.
+</p>
 
-              <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 mr-10 flex items-center gap-2">
-                Welcome to Careplexus  E-Pharmacy — your trusted source for
-                <Pill className="inline text-blue-500" size={16} /> medicines,
-                <Leaf className="inline text-green-500" size={16} /> supplements,
-                <Package className="inline text-purple-500" size={16} /> medical devices,
-                with <Truck className="inline text-orange-500" size={16} /> fast delivery,
-                guaranteed quality, and expert care.
-              </p>
+<p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 mr-10 flex items-center gap-2">
+  At Careplexus E-Pharmacy, pharmacists lead the way — ensuring you get
+  <Pill className="inline text-blue-500" size={16} /> safe medicines,
+  <Leaf className="inline text-green-500" size={16} /> reliable supplements,
+  <crossSquare className="inline text-purple-500" size={16} /> quality medical devices,
+  with <Truck className="inline text-orange-500" size={16} /> fast delivery,
+  guaranteed authenticity, and professional care.
+</p>
+
             </motion.div>
           </div>
         </div>
