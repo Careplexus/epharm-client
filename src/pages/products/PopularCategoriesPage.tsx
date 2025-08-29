@@ -1,7 +1,7 @@
 import { ProductSlider } from "@/components";
 import { products } from "@/data";
 import { motion } from "framer-motion";
-import { Leaf, crossSquare, Pill, Truck } from "lucide-react";
+import { Leaf, Activity, Pill, Truck } from "lucide-react";
 
 export default function PopularCategoriesPage() {
   const categories = Array.from(new Set(products.map((product) => product.category)));
@@ -36,7 +36,7 @@ export default function PopularCategoriesPage() {
   At Careplexus E-Pharmacy, pharmacists lead the way — ensuring you get
   <Pill className="inline text-blue-500" size={16} /> safe medicines,
   <Leaf className="inline text-green-500" size={16} /> reliable supplements,
-  <crossSquare className="inline text-purple-500" size={16} /> quality medical devices,
+  <Activity className="inline text-purple-500" size={16} /> quality medical devices,
   with <Truck className="inline text-orange-500" size={16} /> fast delivery,
   guaranteed authenticity, and professional care.
 </p>
@@ -45,7 +45,7 @@ export default function PopularCategoriesPage() {
   At Careplexus E-Pharmacy, pharmacists lead the way — ensuring you get
   <Pill className="inline text-blue-500" size={16} /> safe medicines,
   <Leaf className="inline text-green-500" size={16} /> reliable supplements,
-  <crossSquare className="inline text-purple-500" size={16} /> quality medical devices,
+  <Activity className="inline text-purple-500" size={16} /> quality medical devices,
   with <Truck className="inline text-orange-500" size={16} /> fast delivery,
   guaranteed authenticity, and professional care.
 </p>
